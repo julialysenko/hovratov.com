@@ -1,0 +1,298 @@
+@font-face {
+    font-family: 'Arimo-bold';
+    src: url('../fonts/arimo-bold-webfont.eot') format('embedded-opentype'),
+         url('../fonts/arimo-bold-webfont.woff') format('woff'),
+         url('../fonts/arimo-bold-webfont.ttf') format('truetype'),
+         url('../fonts/arimo-bold-webfont.svg') format('svg');
+         font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Arimo-regular';
+    src: url('../fonts/arimo-regular-webfont.eot') format('embedded-opentype'),
+         url('../fonts/arimo-regular-webfont.woff') format('woff'),
+         url('../fonts/arimo-regular-webfont.ttf') format('truetype'),
+         url('../fonts/arimo-regular-webfont.svg') format('svg');
+         font-weight: 500;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.header .nav {
+	margin: 0 auto 0 auto;
+    height: 80px;
+    background-color: #3a3836;
+    letter-spacing: .1em;
+    text-align: right;
+    text-transform: uppercase;
+    min-height: 41px;
+    font-family: "Arimo-bold", Arial, sans-serif;
+    font-style: normal;
+    font-size: 0.6825em;
+}
+
+.nav ul, 
+.nav ol {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header ul li,
+.footer ul li {
+    display: inline-block;
+}
+
+h1 {
+    font-family: "Arimo-bold", Arial, sans-serif;
+    font-size: 100px;
+    line-height: 96px;
+	color: #4b5053;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: "Arimo-bold", Arial, sans-serif;
+    font-size: 70px;
+    line-height: 66px;
+	color: #4b5053;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: "Arimo-bold", Arial, sans-serif;
+    font-size: 40px;
+    line-height: 36px;
+	color: #4b5053;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-family: "Arimo-bold", Arial, sans-serif;
+    font-size: 20px;
+    line-height: 16px;
+	color: #4b5053;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: "Arimo-regular", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+	color: #4b5053;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a {
+	color: #4b5053;
+	text-decoration: none;
+	opacity: 1;
+	transition: opacity .3s linear;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+	opacity: 0.6;
+}
+
+.homepage-news {
+    position: relative;
+    height: 305px;
+}
+
+.homepage-news .news-list {
+    list-style: none;
+    margin: 0 auto 0 auto;
+    padding: 0 0 0 246px;
+    width: 820px;
+}
+
+/*
+.homepage-news .news-content {
+    list-style: none;
+    overflow: hidden;
+    padding-top: 24px;
+    height: 230px;
+    border-top: 1px solid #000;
+}
+
+.homepage-news .news-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.homepage-news .news-content li {
+    zoom: 1;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transition: opacity 250ms ease-out;
+    max-height: 227px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+}
+*/
+
+.homepage-news .news-markers ul li a {
+    font-family: Georgia, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 4em;
+    line-height: 0;
+    color: #666;
+}
+
+.homepage-news .news-markers ul li a.current {
+    color: #ff9933;
+}
+
+.homepage-news .news-content li.current {
+    zoom: 1;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    z-index: 2;
+}
+
+.home-grid {
+    margin: 23px auto 80px;
+    min-height: 615px;
+    min-width: 966px;
+    max-width: 2125px;
+    min-width: 966px;
+    width: 100%;
+}
+
+.home-grid article.brick {
+    zoom: 1;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    transition: opacity 0.75s ease-out;
+    -moz-transition: opacity 0.75s ease-out;
+    -webkit-transition: opacity 0.75s ease-out;
+}
+
+@media only screen and (max-width: 1410px)
+.home-grid article.two-column {
+    width: 66.666666666666% !important;
+}
+
+.home-grid article {
+    display: block;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    zoom: 1;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transition: opacity 0.325s ease-out;
+    -moz-transition: opacity 0.325s ease-out;
+    -webkit-transition: opacity 0.325s ease-out;
+}
+
+.home-grid article img {
+    display: block;
+    width: 100%;
+}
+
+.home-grid article a, 
+.home-grid article a:active, 
+.home-grid article a:link, 
+.home-grid article a:visited {
+    color: #fff;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    text-shadow: 0.05em 0.05em rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.home-grid article a:hover, 
+.home-grid article a.hover, 
+.home-grid article a:active:hover, 
+.home-grid article a:active.hover, 
+.home-grid article a:link:hover, 
+.home-grid article a:link.hover, 
+.home-grid article a:visited:hover, 
+.home-grid article a:visited.hover {
+    color: #fff;
+    text-shadow: 0.05em 0.05em rgba(0, 0, 0, 0.1);
+}
+
+.home-grid article a, 
+.home-grid article a:active, 
+.home-grid article a:link, 
+.home-grid article a:visited {
+    color: #fff;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    text-shadow: 0.05em 0.05em rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.home-grid article a section, 
+.home-grid article a:active section,
+ .home-grid article a:link section, 
+ .home-grid article a:visited section {
+    border: 5px solid #fff;
+    border-width: 10px 5px 0 5px;
+    height: 100%;
+}
+
+.home-grid article a section div, 
+.home-grid article a:active section div, 
+.home-grid article a:link section div, 
+.home-grid article a:visited section div {
+    background: url(../images/article-transparent-bg.png) 0 0;
+    background: rgba(0, 0, 0, 0.72);
+    height: 100%;
+    padding: 20px;
+    zoom: 1;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transition: opacity 0.325s ease-out;
+    -moz-transition: opacity 0.325s ease-out;
+    -webkit-transition: opacity 0.325s ease-out;
+}
+
+.home-grid article a:hover section > div, 
+.home-grid article a.hover section > div, 
+.home-grid article a:active:hover section > div, 
+.home-grid article a:active.hover section > div, 
+.home-grid article a:link:hover section > div, 
+.home-grid article a:link.hover section > div, 
+.home-grid article a:visited:hover section > div, 
+.home-grid article a:visited.hover section > div {
+    zoom: 1;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    transition: opacity 0.325s ease-out;
+    -moz-transition: opacity 0.325s ease-out;
+    -webkit-transition: opacity 0.325s ease-out;
+}
+
