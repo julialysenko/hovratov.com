@@ -32,11 +32,14 @@ html {
     background-color: #3a3836;
     letter-spacing: .1em;
     text-align: right;
-    text-transform: uppercase;
     min-height: 41px;
     font-family: "Arimo-bold", Arial, sans-serif;
     font-style: normal;
     font-size: 0.6825em;
+}
+
+.footer {
+    color: #777777;
 }
 
 .nav ul, 
@@ -110,6 +113,18 @@ a {
 	transition: opacity .3s linear;
 }
 
+.brick h1,
+.brick h2,
+.brick h3,
+.brick h4 {
+	color: #fff;
+}
+
+.brick a:hover,
+.brick a:focus {
+    opacity:1;
+}
+
 a:hover,
 a:focus {
     text-decoration: none;
@@ -176,15 +191,6 @@ a:focus {
     z-index: 2;
 }
 
-.home-grid {
-    margin: 23px auto 80px;
-    min-height: 615px;
-    min-width: 966px;
-    max-width: 2125px;
-    min-width: 966px;
-    width: 100%;
-}
-
 .home-grid article.brick {
     zoom: 1;
     filter: alpha(opacity=100);
@@ -210,11 +216,6 @@ a:focus {
     transition: opacity 0.325s ease-out;
     -moz-transition: opacity 0.325s ease-out;
     -webkit-transition: opacity 0.325s ease-out;
-}
-
-.home-grid article img {
-    display: block;
-    width: 100%;
 }
 
 .home-grid article a, 
@@ -296,3 +297,6 @@ a:focus {
     -webkit-transition: opacity 0.325s ease-out;
 }
 
+.logo {
+    margin: 70px 0 0;
+}
