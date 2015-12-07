@@ -26,7 +26,7 @@ html {
     box-sizing: inherit;
 }
 
-.header .nav {
+.header {
 	margin: 0 auto 0 auto;
     height: 80px;
     background-color: #3a3836;
@@ -51,9 +51,26 @@ html {
     padding: 0;
 }
 
-.header ul li,
-.footer ul li {
+ul li {
     display: inline-block;
+}
+
+.header ul li {
+    display: inline-block;
+    margin-left: 50px;
+}
+/*
+.menu ul {
+    float: left;
+}
+*/
+.news-markers ul li a {
+    font-family: Georgia, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 4em;
+    line-height: 0;
+    color: #666;
 }
 
 h1 {
@@ -90,9 +107,8 @@ h4 {
     font-family: "Arimo-bold", Arial, sans-serif;
     font-size: 20px;
     line-height: 16px;
-	color: #4b5053;
+	color: #fdfdfd;
     text-align: left;
-    text-transform: uppercase;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -300,4 +316,44 @@ a:focus {
 
 .logo {
     margin: 70px 0 0;
+}
+
+.facebook {
+    position: absolute;
+    display: inline-block;
+    background-image: url("../icons/fb.png");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    background-position: 0;
+}
+
+.facebook-2 {
+    position: absolute;
+    display: inline-block;
+    background-image: url("../icons/fb-2.png");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    background-position: 0;
+}
+
+.instagram {
+    position: absolute;
+    display: inline-block;
+    background-image: url("../icons/insta.png");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    background-position: 0;
+}
+
+.pinterest {
+    position: absolute;
+    display: inline-block;
+    background-image: url("../icons/pin.png");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    background-position: 0;
 }
