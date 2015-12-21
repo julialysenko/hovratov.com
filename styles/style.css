@@ -26,13 +26,17 @@ html {
     box-sizing: inherit;
 }
 
+.container {
+    margin: 50px auto 0;
+    width: 100%;
+}
+
 .header {
 	margin: 0 auto 0 auto;
-    height: 80px;
+    height: 60px;
     background-color: #3a3836;
     letter-spacing: .1em;
     text-align: right;
-
     min-height: 41px;
     font-family: "Arimo-bold", Arial, sans-serif;
     font-style: normal;
@@ -40,7 +44,8 @@ html {
 }
 
 .footer {
-    color: #777777;
+    height: 60px;
+    background-color: #3a3836;
 }
 
 .nav ul, 
@@ -59,11 +64,21 @@ ul li {
     display: inline-block;
     margin-left: 50px;
 }
-/*
-.menu ul {
-    float: left;
+
+.menu {
+    margin: 50px 0 0;
+    width: 85%;
 }
-*/
+
+.news-list {
+    margin-top: 0;
+}
+
+.news-content h2 {
+    border-top: 1px solid #111;
+    padding-top: 15px;
+}
+
 .news-markers ul li a {
     font-family: Georgia, serif;
     font-weight: 700;
@@ -75,8 +90,8 @@ ul li {
 
 h1 {
     font-family: "Arimo-bold", Arial, sans-serif;
-    font-size: 100px;
-    line-height: 96px;
+    font-size: 70px;
+    line-height: 80px;
 	color: #4b5053;
     text-align: left;
     margin-top: 20px;
@@ -85,8 +100,8 @@ h1 {
 
 h2 {
     font-family: "Arimo-bold", Arial, sans-serif;
-    font-size: 70px;
-    line-height: 66px;
+    font-size: 50px;
+    line-height: 60px;
 	color: #4b5053;
     text-align: left;
     margin-top: 20px;
@@ -95,8 +110,8 @@ h2 {
 
 h3 {
     font-family: "Arimo-bold", Arial, sans-serif;
-    font-size: 40px;
-    line-height: 36px;
+    font-size: 25px;
+    line-height: 30px;
 	color: #4b5053;
     text-align: left;
     margin-top: 20px;
@@ -107,7 +122,7 @@ h4 {
     font-family: "Arimo-bold", Arial, sans-serif;
     font-size: 20px;
     line-height: 16px;
-	color: #fdfdfd;
+	color: #4b5053;
     text-align: left;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -217,11 +232,23 @@ a:focus {
     -webkit-transition: opacity 0.75s ease-out;
 }
 
+.two-column.brick {
+    width: 70%;
+}
+
+.one-column.brick {
+    width: 30%;
+}
+
 @media only screen and (max-width: 1410px)
 .home-grid article.two-column {
     width: 66.666666666666% !important;
 }
 
+.home-grid article img {
+    display: block;
+    width: 100%;
+} 
 .home-grid article {
     display: block;
     float: left;
@@ -275,10 +302,10 @@ a:focus {
 
 .home-grid article a section, 
 .home-grid article a:active section,
- .home-grid article a:link section, 
- .home-grid article a:visited section {
+.home-grid article a:link section, 
+.home-grid article a:visited section {
     border: 5px solid #fff;
-    border-width: 10px 5px 0 5px;
+    border-width: 4px 2px 0 2px;
     height: 100%;
 }
 
@@ -315,13 +342,13 @@ a:focus {
 }
 
 .logo {
-    margin: 70px 0 0;
+    margin: 30px 25px 0 100px;
 }
 
 .facebook {
     position: absolute;
     display: inline-block;
-    background-image: url("../icons/fb.png");
+    background-image: url("../icons/fb-1.png");
     background-repeat: no-repeat;
     width: 30px;
     height: 30px;
@@ -341,7 +368,7 @@ a:focus {
 .instagram {
     position: absolute;
     display: inline-block;
-    background-image: url("../icons/insta.png");
+    background-image: url("../icons/inst-1.png");
     background-repeat: no-repeat;
     width: 30px;
     height: 30px;
@@ -351,7 +378,7 @@ a:focus {
 .pinterest {
     position: absolute;
     display: inline-block;
-    background-image: url("../icons/pin.png");
+    background-image: url("../icons/pin-1.png");
     background-repeat: no-repeat;
     width: 30px;
     height: 30px;
