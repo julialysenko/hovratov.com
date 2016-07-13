@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+<head>
+    <!-- partial:include('page/meta.partial.html') -->
+    <title></title>
+    <style>
+
+        .css-load-bg {
+            background-color: #070724;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom:0;
+            z-index: 100500;
+        }
+
+        .cssload-container {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .cssload-speeding-wheel {
+            width: 49px;
+            height: 49px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 3px solid rgb(0,204,255);
+            border-radius: 50%;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            margin: -25px 0 0 -25px;
+            -webkit-animation: cssload-spin 800ms infinite linear;
+            -moz-animation: cssload-spin 800ms infinite linear;
+            -ms-animation: cssload-spin 800ms infinite linear;
+            -o-animation: cssload-spin 800ms infinite linear;
+            animation: cssload-spin 800ms infinite linear;
+        }
+
+        @-webkit-keyframes cssload-spin {
+            100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+        }
+        @-moz-keyframes cssload-spin {
+            100%{ -moz-transform: rotate(360deg); transform: rotate(360deg); }
+        }
+        @-ms-keyframes cssload-spin {
+            100%{ -ms-transform: rotate(360deg); transform: rotate(360deg); }
+        }
+        @-o-keyframes cssload-spin {
+            100%{ -o-transform: rotate(360deg); transform: rotate(360deg); }
+        }
+        @keyframes cssload-spin {
+            100%{ transform: rotate(360deg); transform: rotate(360deg); }
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="css-load-bg">
+    <div class="cssload-container">
+        <div class="cssload-speeding-wheel"></div>
+    </div>
+</div>
+
+    <div class="layout-content">
+        <div class="layout-container-fluid">
+            <div class="layout-content-main">
+                <div class="bg-img"><img alt="" src="images/bg-img.png"></div>
+
+                <header class="active-header clearfix">
+                    <div class=" navbar">
+                        <ul>
+                            <li>
+                                <span></span><a href="about.html">О сервисе</a>
+                            </li>
+
+                            <li>
+                                <span></span><a href="exchangers.html" class="active-link">Обменники</a>
+                            </li>
+
+                            <li>
+                                <span></span><a href="help.html">Помощь</a>
+                            </li>
+
+                            <li>
+                                <span></span><a href="partners.html">Партнеры</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-cont user-drop-cont col-4">
+                                <a href="" id="user-drop-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="user-drop-link">UserName <img alt="" src="images/down-arrow.png"></a>
+                                <div class="dropdown-menu user-drop-menu" aria-labelledby="user-drop-link">
+                                    <a href="">Настройки</a>
+                                    <a href="">Реферальная программа</a>
+                                   <a href="">Обменники</a>
+                                   <a href="">Выход</a>
+                                </div>
+                    </div>
+                </header>
+                    <div class="row">
+                        <div class="header-index-top col-8">
+                            <h1 class="directions-header">Обмен Perfect Money USD на Visa/MasterCard  USD</h1>
+                       </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="main-tabs">
+                                <div class="main-tab">
+                                    <a href="#rates-tab" class="active" aria-controls="rates-tab" role="tab" data-toggle="tab"><span class="ex-rate"></span><span class="link-text">Курсы обмена</span></a>
+                                </div>
+                                <div class="main-tab">
+                                    <a href="#statistics-tab" class="" aria-controls="statistics-tab" role="tab" data-toggle="tab"><span class="ex-statistics"></span><span class="link-text">Статистика</span></a>
+                                </div>
+                                <div class="main-tab notification-dropdown dropdown-cont">
+                                    <a href="#" id="notif-drop-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="ex-notifications"></span><span class="link-text">Оповещения</span></a>
+                                    <div class="dropdown-menu notif-drop-menu" aria-labelledby="notif-drop-link">
+                                        <form action="POST" id="notif-form">
+                                            <div class="notif-head">
+                                            <p class="notif-head-pr">Уведомление будет отправлено на почту</p>
+                                            <div class="email-cont">
+                                                <div class="form-group">
+                                                    <input id="notif-email" type="text" placeholder="email@service.com" class="form-control"/>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <div class="notif-body">
+                                                <div class="exchange-details">
+                                                    <p class="notif-inf">Когда будет обмен с курсом не менее</p>
+                                                    <div class="input-cont">
+                                                        <input type="text" id="notif-in" class="form-control"/>
+                                                    </div>
+                                                    <div class="notif-descr">
+                                                        <span> <span class="notif-from-sp">WMZ</span> за 1 <span class="notif-to-sp">USD Perfect Money</span></span>
+                                                    </div>
+                                                </div>
+                                               <div class="reserve-details">
+                                                   <p class="notif-inf">И резервом не менее</p>
+                                                   <div class="input-cont">
+                                                       <input type="text" id="notif-reserve" class="form-control"/>
+                                                   </div>
+                                                   <div class="notif-descr">
+                                                       <span class="notif-to-sp">USD Perfect Money</span>
+                                                   </div>
+                                               </div>
+                                                <div class="notif-timing">
+                                                    <span>Заявка будет аннулирована через</span>
+                                                    <div class="radios-cont">
+                                                        <input type="radio" value="PT6H" id="radio1" name="period" checked/>
+                                                        <label for="radio1" class="radio-label">6 часов</label>
+                                                        <input type="radio" value="PT12H" id="radio2" name="period"/>
+                                                        <label for="radio2" class="radio-label">12 часов</label>
+                                                        <input type="radio" value="PT24H" id="radio3" name="period"/>
+                                                        <label for="radio3" class="radio-label">24 часа</label>
+                                                        <input type="radio" value="P7D" id="radio4" name="period"/>
+                                                        <label for="radio4" class="radio-label">Неделю</label>
+                                                        <input type="radio" value="P1M" id="radio5" name="period"/>
+                                                        <label for="radio5" class="radio-label">Месяц</label>
+                                                        <input type="radio" value="P3M" id="radio6" name="period"/>
+                                                        <label for="radio6" class="radio-label">3 месяца</label>
+                                                    </div>
+                                                </div>
+                                                <div class="btn-cont">
+                                                    <button class="btn" disabled type="submit" id="notif-form-btn">Подписаться</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                       <div class="col-8 tab-content">
+                           <div id="rates-tab" role="tabpanel" class="tab-pane fade in active rates-tab">
+                               <div class="table">
+                                   <table>
+                                       <tr>
+                                           <th>Обменник</th>
+
+                                           <th colspan="2">Лучший курс</th>
+
+                                           <th>Резерв</th>
+                                       </tr>
+
+                                       <tr>
+                                           <td class="td-highlighted">
+                                               <span class="icon-green-dot"></span>
+                                    <span><a class="name-of-merchant" href=
+                                            "#">MagneticExchange<br></a></span>
+                                               <a href="#"><span class=
+                                                                         "icon-cc"></span></a> <a class="" href=
+                                                   "#"><span class="icon-human"></span></a>
+                                               <a href="#"><span class=
+                                                                         "icon-message"></span><span class="message-counter-positive">75</span><span class="message-counter-negative">5</span></a>
+                                           </td>
+
+                                           <td>
+                                               <span>2.03</span>
+
+                                               <h5>RUB</h5>
+                                           </td>
+
+                                           <td class="course-differents-td">
+                                               <span class="icon-table-arrow"></span>2.40
+
+                                               <h5>HRN</h5>
+                                           </td>
+
+                                           <td>496 533</td>
+                                       </tr>
+
+                                       <tr>
+                                           <td class="td-highlighted">
+                                               <span class="icon-green-dot"></span>
+                                    <span><a class="name-of-merchant" href=
+                                            "#">MagneticExchange<br></a></span>
+                                               <a href="#"><span class=
+                                                                         "icon-cc"></span></a> <a class="" href=
+                                                   "#"><span class="icon-human"></span></a>
+                                               <a href="#"><span class=
+                                                                         "icon-message"></span><span class="message-counter-positive">75</span><span class="message-counter-negative">5</span></a>
+                                           </td>
+
+                                           <td>
+                                               <span>2.03</span>
+
+                                               <h5>UAH Приват</h5>
+                                           </td>
+
+                                           <td class="course-differents-td">
+                                               <span class="icon-table-arrow"></span>2.81
+
+                                               <h5>WMR</h5>
+                                           </td>
+
+                                           <td>496 533</td>
+                                       </tr>
+
+                                       <tr>
+                                           <td class="td-highlighted">
+                                               <span class="icon-green-dot"></span>
+                                    <span><a class="name-of-merchant" href=
+                                            "#">MagneticExchange<br></a></span>
+                                               <a href="#"><span class=
+                                                                         "icon-cc"></span></a> <a class="" href=
+                                                   "#"><span class="icon-human"></span></a>
+                                               <a href="#"><span class=
+                                                                         "icon-message"></span><span class="message-counter-positive">75</span><span class="message-counter-negative">5</span></a>
+                                           </td>
+
+                                           <td>
+                                               2.03
+
+                                               <h5>WMR</h5>
+                                           </td>
+
+                                           <td class="course-differents-td">
+                                               <span class="icon-table-arrow"></span>2.85
+
+                                               <h5>RUB</h5>
+                                           </td>
+
+                                           <td>496 533</td>
+                                       </tr>
+                                   </table>
+                               </div>
+
+                           </div>
+
+                           <div id="statistics-tab" class="tab-pane fade statisctics-tab">
+                               <div class="period-cont">
+                                   <div class="course-changes-dropdown">
+                                       <div class="statistics-option-dropdown dropdown-cont">
+                                           <span><a href="" id="statistics-option-drop-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Изменение курса по времени</a><img alt="" class="dropdown-arrow" src="images/down-arrow.png"></span>
+                                           <div class="dropdown-menu statistics-option-dropdown-menu" aria-labelledby="statistics-option-drop-link">
+                                             <ul>
+                                                 <li><a id="course-changes-type" href="">Изменение колебания курса</a></li>
+                                                 <li><a id="reserve-changes-type" href="">Изменение общего резерва валют</a></li>
+                                                 <li><a id="popularity-type" href="">Колебания популярности курса</a></li>
+                                                 <li><a id="click-type" href="">Объем кликов</a></li>
+                                             </ul>
+                                           </div>
+                                       </div>
+                                       <div class="period-changes">
+                                           <a href="" class="predifined-period for-hour">За час</a>
+                                           <a href="" class="predifined-period for-day active">За день</a>
+                                           <div class="calendar-dropdown-cont dropdown-cont">
+                                               <a href="#" id="calendar-drop-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Выбрать период</a>
+                                               <div id="calendar" aria-labelledby="calendar-drop-link" class="dropdown-menu calendar-dropdown">
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="chart-cont">
+                                   <canvas id="canvas" height="450" width="600"></canvas>
+                               </div>
+
+                           </div>
+                       
+                    </div>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="layout-aside clearfix">
+        <div class="sidebar-controls">
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="logo">
+                        <a href="#"><h2>Exchanger<span>24</span></h2></a>
+                    </div>
+                    <div class="dropdown dropdown-cont">
+                        <button class="btn dropdown-button" data-target="#"
+                                data-toggle="dropdown" id="dLabel">RU<img alt="" src=
+                                "images/down-arrow.png"></button>
+                        <ul class="dropdown-menu">
+                            <li>UA</li>
+                            <li>ENG</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 ">
+                    <div class="tabs">
+                        <ul class="directions clearfix">
+                            <li class="tab"><a class="directions-first animated">Все направления</a></li>
+                            <li class="tab"><a class="directions-second">Популярные</a></li>
+                        </ul>
+                        <div class="purple-line">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="inputs">
+                        <input  class="first-input" placeholder="Отдаете" type="text">
+                        <div class="arrow-input"><div class="icon-arrow-input"></div></div>
+                        <input  class="second-input" placeholder="Получаете" type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 changed-position">
+                <div class="sidebar-choice" data-simplebar-direction="vertical">
+                    <div class="all-directions-tab">
+                        <ul class="sidebar-ul left-part">
+                            <li><span class="icon-select"></span><a data-name="TBRUB" href="#">Telebank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="GDPUSD" href="#">GlobalDigitalPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="GDPEUR" href="#">GlobalDigitalPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="GCMTRUB" href="#">Golden Crown Money Transfers RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="GCMTUSD" href="#">Golden Crown Money Transfers USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="RENBRUB" href="#">Renessans Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="WMZ" href="#">Webmoney USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="WMR" href="#">Webmoney RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="WME" href="#">Webmoney EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="WMU" href="#">Webmoney UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="WMB" href="#">Webmoney BYR</a></li>
+                            <li><span class="icon-select"></span><a data-name="WMK" href="#">Webmoney KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="YAMRUB" href="#">Yandex.Money RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="RBKMRUB" href="#">RBKmoney RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="RBKMUSD" href="#">RBKmoney USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="ESPBYR" href="#">EasyPay BYR</a></li>
+                            <li><span class="icon-select"></span><a data-name="FETUSD" href="#">Fethard USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="AGUSD" href="#">AlterGold USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="IMUAH" href="#">IMoney UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="INCRUB" href="#">INOCard RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="FPUSD" href="#">FasaPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="BBRUB" href="#">Binbank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="MTSBRUB" href="#">MTS Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="OCNBRUB" href="#">Ocean Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="CTYBRUB" href="#">Cyti Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="CCXUSD" href="#">C-cex.com</a></li>
+                            <li><span class="icon-select"></span><a data-name="EXMUSD" href="#">Exmo.com USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="EXMRUB" href="#">Exmo.com RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="SBEUR" href="#">SwedBank EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="BLRBBYR" href="#">Belarusbank BYR</a></li>
+                            <li><span class="icon-select"></span><a data-name="BLRBUSD" href="#">Belarusbank USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="BLRBRUB" href="#">Belarusbank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="BLRBEUR" href="#">Belarusbank EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="BTAKZT" href="#">BTA Bank</a></li>
+                            <li><span class="icon-select"></span><a data-name="LRUSD" href="#">Liberty Reserve USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="SMSRUB" href="#">SMS RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="LREUR" href="#">Liberty Reserve EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="ADVCEUR" href="#">Advanced Cash EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="ADVCRUB" href="#">Advanced Cash RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="ACKZT" href="#">Alfa Bank KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="ACRUB" href="#">Alfa Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="ACUAH" href="#">Alfa Bank UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="ADVCUSD" href="#">Advanced Cash USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="ANLKUSD" href="#">Anelik USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="AVBRUB" href="#">Avangard RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="BTCERUB" href="#">Btc-e code RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="BTCEUSD" href="#">Btc-e code USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="BTMUSD" href="#">Betrae Money USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="CARDEUR" href="#">Card EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="CARDKZT" href="#">Card KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="CARDRUB" href="#">Card RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="CARDUAH" href="#">Card UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="CARDUSD" href="#">Card USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="CASHEUR" href="#">Cash EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="CASHKZT" href="#">Cash KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="CASHRUB" href="#">Cash RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="CASHUAH" href="#">Cash UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="CASHUSD" href="#">Cash USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="CGEUR" href="#">C-Gold EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="CGUSD" href="#">C-Gold USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="CNTEUR" href="#">Contact EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="CNTRUB" href="#">Contact RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="CNTUSD" href="#">Contact USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="CSH4PUSD" href="#">Cash4pay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="CWMRUB" href="#">Cash4wm RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="DKEUR" href="#">DeltaKey EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="DKRUB" href="#">DeltaKey RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="DKUAH" href="#">DeltaKey UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="DKUSD" href="#">DeltaKey USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="DMRBUSD" href="#">DemirBank USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="DTBBYR" href="#">DeltaBank BYR</a></li>
+                            <li><span class="icon-select"></span><a data-name="DTBUAH" href="#">DeltaBank UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="ECNEXUSD" href="#">eCoin.eu code</a></li>
+                            <li><span class="icon-select"></span><a data-name="EGCEUR" href="#">EuroGoldCash EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="EGCUSD" href="#">EuroGoldCash USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="EPEUR" href="#">EgoPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="EPMEUR" href="#">ePayments EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="EPMUSD" href="#">ePayments USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="EPUSD" href="#">EgoPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="FRTBKZT" href="#">ForteBank KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="GPBRUB" href="#">Gazprombank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="HCBRUB" href="#">Homecredit RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="HDUSD" href="#">HD-Money USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="HLKBKZT" href="#">Halyk Bank KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="HMEUR" href="#">HelixMoney EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="HMRUB" href="#">HelixMoney RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="HMUAH" href="#">HelixMoney UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="HMUSD" href="#">HelixMoney USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="KKBKZT" href="#">Kazkombank KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="KKBUSD" href="#">Kazkombank USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="KUKRUB" href="#">Kukuruza  RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="LPEUR" href="#">LavaPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="LPGBP" href="#">LavaPay GBP</a></li>
+                            <li><span class="icon-select"></span><a data-name="LPRUB" href="#">LavaPay RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="LPUAH" href="#">LavaPay UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="LPUSD" href="#">LavaPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="LQEUR" href="#">LiqPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="LQRUB" href="#">LiqPay RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="LQUAH" href="#">LiqPay UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="LQUSD" href="#">LiqPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="LVPBYR" href="#">LvPay BYR</a></li>
+                            <li><span class="icon-select"></span><a data-name="LVPEUR" href="#">LvPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="LVPGBP" href="#">LvPay GBP</a></li>
+                            <li><span class="icon-select"></span><a data-name="LVPRUB" href="#">LvPay RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="LVPUAH" href="#">LvPay UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="LVPUSD" href="#">LvPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="MGEUR" href="#">Moneygram EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="MGUSD" href="#">Moneygram USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="MMLEUR" href="#">MoneyMail EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="MMLRUB" href="#">MoneyMail RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="MMLUSD" href="#">MoneyMail USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="MNTRUB" href="#">Moneta RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="MOSBRUB" href="#">Bank of Moscow RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="MWRUB" href="#">Mobile Wallet RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="NIXEUR" href="#">Nixmoney EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="NIXUSD" href="#">Nixmoney USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="NLMEUR" href="#">OnlyMoney EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="NLMRUB" href="#">OnlyMoney RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="NLMUAH" href="#">OnlyMoney UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="NLMUSD" href="#">OnlyMoney USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="NNMUSD" href="#">NN-Money USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="NTLREUR" href="#">Neteller EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="NTLRUSD" href="#">Neteller USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="NXUSD" href="#">Numox USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="OKEUR" href="#">OKPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="OKGPB" href="#">OKPay GPB</a></li>
+                            <li><span class="icon-select"></span><a data-name="OKRUB" href="#">OKPay RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="OKUSD" href="#">OKPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="OPAYEUR" href="#">OOOPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="OPAYRUB" href="#">OOOPay RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="OPAYUSD" href="#">OOOPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="OPNBRUB" href="#">Openbank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="OSDBUAH" href="#">Oschadbank UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="OTPBUAH" href="#">OTP bank UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="P24EUR" href="#">Privat24 EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="P24RUB" href="#">Privat24 RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="P24UAH" href="#">Privat24 UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="P24USD" href="#">Privat24 USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PAUSD" href="#">Payza USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PMBBUAH" href="#">PUMB UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="PMEUR" href="#">Perfect Money EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="PMRRUB" href="#">Paymer RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="PMRUSD" href="#">Paymer USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PMUSD" href="#">Perfect Money USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PPEUR" href="#">PayPal EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="PPGBP" href="#">PayPal GBP</a></li>
+                            <li><span class="icon-select"></span><a data-name="PPRUB" href="#">PayPal RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="PPTEUR" href="#">PayPlat EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="PPTRUB" href="#">PayPlat RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="PPTUSD" href="#">PayPlat USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PPUSD" href="#">PayPal USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PREUR" href="#">Payeer EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="PRRUB" href="#">Payeer RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="PRUSD" href="#">Payeer USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PSBRUB" href="#">Promsvyazbank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="PWUSD" href="#">PayWeb USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PXMEUR" href="#">Paxum EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="PXMUSD" href="#">Paxum USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PXUSD" href="#">Pecunix USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="QWEUR" href="#">Qiwi EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="QWKZT" href="#">Qiwi KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="QWRUB" href="#">Qiwi RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="QWUSD" href="#">Qiwi USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="RFBRUB" href="#">Raiffeisen RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="RNKBRUB" href="#">RNKB Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="ROSBRUB" href="#">Rosbank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="RPUSD" href="#">Redpass USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="RSHBRUB" href="#">RSH Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="RUSSTRUB" href="#">RusStandard RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="SBERKZT" href="#">SberBank KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="SBERRUB" href="#">SberBank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="SBERUSD" href="#">SberBank USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="SKLEUR" href="#">Skrill EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="SKLUSD" href="#">Skrill USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="STPEUR" href="#">SolidTrustPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="STPRUB" href="#">SolidTrustPay RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="STPUSD" href="#">SolidTrustPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="STRUB" href="#">Star Trek RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="STUSD" href="#">Star Trek USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="SVBRUB" href="#">Svyaznoy RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="TCSBRUB" href="#">Tinkoff CS RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="TMRUB" href="#">Telemoney RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="TNCUSD" href="#">Technocash USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="TRBRUB" href="#">Trust RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="UAMUSD" href="#">UA-Money USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="UKEUR" href="#">Ukash EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="UKUSD" href="#">Ukash USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="UMEUR" href="#">UkrMoney EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="UMRUB" href="#">UkrMoney RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="UMUAH" href="#">UkrMoney UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="UMUSD" href="#">UkrMoney USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="UNCBUAH" href="#">UniCredit UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="UNVBUAH" href="#">Universal Bank UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="USBRUB" href="#">Uralsib Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="USBUAH" href="#">UkrSibBank UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="USTMRUB" href="#">Unistream RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="USTMUSD" href="#">Unistream USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="VB24UAH" href="#">VAB 24 UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="VMUSD" href="#">V-Money USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="WCEUR" href="#">Webcreds EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="WCRUB" href="#">Webcreds RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="WCUSD" href="#">Webcreds USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="WIREBYR" href="#">Wire BYR</a></li>
+                            <li><span class="icon-select"></span><a data-name="WIREEUR" href="#">Wire EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="WIREGBP" href="#">Wire GBP</a></li>
+                            <li><span class="icon-select"></span><a data-name="WIREKZT" href="#">Wire KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="WIRERUB" href="#">Wire RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="WIREUAH" href="#">Wire UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="WIREUSD" href="#">Wire USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="WORUB" href="#">W1 RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="WOUAH" href="#">W1 UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="WOUSD" href="#">W1 USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="WTUSD" href="#">Webtransfer USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="WUEUR" href="#">Western Union EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="WURUB" href="#">Western Union RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="WUUSD" href="#">Western Union USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="ZPRUB" href="#">Z-Payment RUB</a></li>
+                        </ul>
+                        <div class="connecter">
+                            <div class="connecter-line connecter-line-all"></div>
+                        </div>
+                        <ul class="sidebar-ul right-part">
+                            <li><span class="icon-select"></span><a data-name="TBRUB" href="#">Telebank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="GDPUSD" href="#">GlobalDigitalPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="GDPEUR" href="#">GlobalDigitalPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="GCMTRUB" href="#">Golden Crown Money Transfers RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="GCMTUSD" href="#">Golden Crown Money Transfers USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="RENBRUB" href="#">Renessans Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="WMZ" href="#">Webmoney USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="WMR" href="#">Webmoney RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="WME" href="#">Webmoney EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="WMU" href="#">Webmoney UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="WMB" href="#">Webmoney BYR</a></li>
+                            <li><span class="icon-select"></span><a data-name="WMK" href="#">Webmoney KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="YAMRUB" href="#">Yandex.Money RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="RBKMRUB" href="#">RBKmoney RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="RBKMUSD" href="#">RBKmoney USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="ESPBYR" href="#">EasyPay BYR</a></li>
+                            <li><span class="icon-select"></span><a data-name="FETUSD" href="#">Fethard USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="AGUSD" href="#">AlterGold USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="IMUAH" href="#">IMoney UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="INCRUB" href="#">INOCard RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="FPUSD" href="#">FasaPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="BBRUB" href="#">Binbank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="MTSBRUB" href="#">MTS Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="OCNBRUB" href="#">Ocean Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="CTYBRUB" href="#">Cyti Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="CCXUSD" href="#">C-cex.com</a></li>
+                            <li><span class="icon-select"></span><a data-name="EXMUSD" href="#">Exmo.com USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="EXMRUB" href="#">Exmo.com RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="SBEUR" href="#">SwedBank EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="BLRBBYR" href="#">Belarusbank BYR</a></li>
+                            <li><span class="icon-select"></span><a data-name="BLRBUSD" href="#">Belarusbank USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="BLRBRUB" href="#">Belarusbank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="BLRBEUR" href="#">Belarusbank EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="BTAKZT" href="#">BTA Bank</a></li>
+                            <li><span class="icon-select"></span><a data-name="LRUSD" href="#">Liberty Reserve USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="SMSRUB" href="#">SMS RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="LREUR" href="#">Liberty Reserve EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="ADVCEUR" href="#">Advanced Cash EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="ADVCRUB" href="#">Advanced Cash RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="ACKZT" href="#">Alfa Bank KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="ACRUB" href="#">Alfa Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="ACUAH" href="#">Alfa Bank UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="ADVCUSD" href="#">Advanced Cash USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="ANLKUSD" href="#">Anelik USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="AVBRUB" href="#">Avangard RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="BTCERUB" href="#">Btc-e code RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="BTCEUSD" href="#">Btc-e code USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="BTMUSD" href="#">Betrae Money USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="CARDEUR" href="#">Card EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="CARDKZT" href="#">Card KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="CARDRUB" href="#">Card RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="CARDUAH" href="#">Card UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="CARDUSD" href="#">Card USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="CASHEUR" href="#">Cash EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="CASHKZT" href="#">Cash KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="CASHRUB" href="#">Cash RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="CASHUAH" href="#">Cash UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="CASHUSD" href="#">Cash USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="CGEUR" href="#">C-Gold EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="CGUSD" href="#">C-Gold USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="CNTEUR" href="#">Contact EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="CNTRUB" href="#">Contact RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="CNTUSD" href="#">Contact USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="CSH4PUSD" href="#">Cash4pay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="CWMRUB" href="#">Cash4wm RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="DKEUR" href="#">DeltaKey EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="DKRUB" href="#">DeltaKey RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="DKUAH" href="#">DeltaKey UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="DKUSD" href="#">DeltaKey USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="DMRBUSD" href="#">DemirBank USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="DTBBYR" href="#">DeltaBank BYR</a></li>
+                            <li><span class="icon-select"></span><a data-name="DTBUAH" href="#">DeltaBank UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="ECNEXUSD" href="#">eCoin.eu code</a></li>
+                            <li><span class="icon-select"></span><a data-name="EGCEUR" href="#">EuroGoldCash EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="EGCUSD" href="#">EuroGoldCash USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="EPEUR" href="#">EgoPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="EPMEUR" href="#">ePayments EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="EPMUSD" href="#">ePayments USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="EPUSD" href="#">EgoPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="FRTBKZT" href="#">ForteBank KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="GPBRUB" href="#">Gazprombank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="HCBRUB" href="#">Homecredit RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="HDUSD" href="#">HD-Money USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="HLKBKZT" href="#">Halyk Bank KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="HMEUR" href="#">HelixMoney EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="HMRUB" href="#">HelixMoney RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="HMUAH" href="#">HelixMoney UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="HMUSD" href="#">HelixMoney USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="KKBKZT" href="#">Kazkombank KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="KKBUSD" href="#">Kazkombank USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="KUKRUB" href="#">Kukuruza  RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="LPEUR" href="#">LavaPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="LPGBP" href="#">LavaPay GBP</a></li>
+                            <li><span class="icon-select"></span><a data-name="LPRUB" href="#">LavaPay RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="LPUAH" href="#">LavaPay UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="LPUSD" href="#">LavaPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="LQEUR" href="#">LiqPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="LQRUB" href="#">LiqPay RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="LQUAH" href="#">LiqPay UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="LQUSD" href="#">LiqPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="LVPBYR" href="#">LvPay BYR</a></li>
+                            <li><span class="icon-select"></span><a data-name="LVPEUR" href="#">LvPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="LVPGBP" href="#">LvPay GBP</a></li>
+                            <li><span class="icon-select"></span><a data-name="LVPRUB" href="#">LvPay RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="LVPUAH" href="#">LvPay UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="LVPUSD" href="#">LvPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="MGEUR" href="#">Moneygram EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="MGUSD" href="#">Moneygram USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="MMLEUR" href="#">MoneyMail EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="MMLRUB" href="#">MoneyMail RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="MMLUSD" href="#">MoneyMail USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="MNTRUB" href="#">Moneta RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="MOSBRUB" href="#">Bank of Moscow RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="MWRUB" href="#">Mobile Wallet RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="NIXEUR" href="#">Nixmoney EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="NIXUSD" href="#">Nixmoney USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="NLMEUR" href="#">OnlyMoney EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="NLMRUB" href="#">OnlyMoney RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="NLMUAH" href="#">OnlyMoney UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="NLMUSD" href="#">OnlyMoney USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="NNMUSD" href="#">NN-Money USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="NTLREUR" href="#">Neteller EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="NTLRUSD" href="#">Neteller USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="NXUSD" href="#">Numox USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="OKEUR" href="#">OKPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="OKGPB" href="#">OKPay GPB</a></li>
+                            <li><span class="icon-select"></span><a data-name="OKRUB" href="#">OKPay RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="OKUSD" href="#">OKPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="OPAYEUR" href="#">OOOPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="OPAYRUB" href="#">OOOPay RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="OPAYUSD" href="#">OOOPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="OPNBRUB" href="#">Openbank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="OSDBUAH" href="#">Oschadbank UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="OTPBUAH" href="#">OTP bank UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="P24EUR" href="#">Privat24 EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="P24RUB" href="#">Privat24 RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="P24UAH" href="#">Privat24 UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="P24USD" href="#">Privat24 USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PAUSD" href="#">Payza USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PMBBUAH" href="#">PUMB UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="PMEUR" href="#">Perfect Money EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="PMRRUB" href="#">Paymer RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="PMRUSD" href="#">Paymer USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PMUSD" href="#">Perfect Money USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PPEUR" href="#">PayPal EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="PPGBP" href="#">PayPal GBP</a></li>
+                            <li><span class="icon-select"></span><a data-name="PPRUB" href="#">PayPal RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="PPTEUR" href="#">PayPlat EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="PPTRUB" href="#">PayPlat RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="PPTUSD" href="#">PayPlat USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PPUSD" href="#">PayPal USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PREUR" href="#">Payeer EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="PRRUB" href="#">Payeer RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="PRUSD" href="#">Payeer USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PSBRUB" href="#">Promsvyazbank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="PWUSD" href="#">PayWeb USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PXMEUR" href="#">Paxum EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="PXMUSD" href="#">Paxum USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="PXUSD" href="#">Pecunix USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="QWEUR" href="#">Qiwi EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="QWKZT" href="#">Qiwi KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="QWRUB" href="#">Qiwi RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="QWUSD" href="#">Qiwi USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="RFBRUB" href="#">Raiffeisen RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="RNKBRUB" href="#">RNKB Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="ROSBRUB" href="#">Rosbank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="RPUSD" href="#">Redpass USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="RSHBRUB" href="#">RSH Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="RUSSTRUB" href="#">RusStandard RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="SBERKZT" href="#">SberBank KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="SBERRUB" href="#">SberBank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="SBERUSD" href="#">SberBank USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="SKLEUR" href="#">Skrill EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="SKLUSD" href="#">Skrill USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="STPEUR" href="#">SolidTrustPay EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="STPRUB" href="#">SolidTrustPay RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="STPUSD" href="#">SolidTrustPay USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="STRUB" href="#">Star Trek RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="STUSD" href="#">Star Trek USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="SVBRUB" href="#">Svyaznoy RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="TCSBRUB" href="#">Tinkoff CS RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="TMRUB" href="#">Telemoney RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="TNCUSD" href="#">Technocash USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="TRBRUB" href="#">Trust RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="UAMUSD" href="#">UA-Money USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="UKEUR" href="#">Ukash EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="UKUSD" href="#">Ukash USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="UMEUR" href="#">UkrMoney EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="UMRUB" href="#">UkrMoney RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="UMUAH" href="#">UkrMoney UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="UMUSD" href="#">UkrMoney USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="UNCBUAH" href="#">UniCredit UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="UNVBUAH" href="#">Universal Bank UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="USBRUB" href="#">Uralsib Bank RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="USBUAH" href="#">UkrSibBank UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="USTMRUB" href="#">Unistream RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="USTMUSD" href="#">Unistream USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="VB24UAH" href="#">VAB 24 UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="VMUSD" href="#">V-Money USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="WCEUR" href="#">Webcreds EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="WCRUB" href="#">Webcreds RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="WCUSD" href="#">Webcreds USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="WIREBYR" href="#">Wire BYR</a></li>
+                            <li><span class="icon-select"></span><a data-name="WIREEUR" href="#">Wire EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="WIREGBP" href="#">Wire GBP</a></li>
+                            <li><span class="icon-select"></span><a data-name="WIREKZT" href="#">Wire KZT</a></li>
+                            <li><span class="icon-select"></span><a data-name="WIRERUB" href="#">Wire RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="WIREUAH" href="#">Wire UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="WIREUSD" href="#">Wire USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="WORUB" href="#">W1 RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="WOUAH" href="#">W1 UAH</a></li>
+                            <li><span class="icon-select"></span><a data-name="WOUSD" href="#">W1 USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="WTUSD" href="#">Webtransfer USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="WUEUR" href="#">Western Union EUR</a></li>
+                            <li><span class="icon-select"></span><a data-name="WURUB" href="#">Western Union RUB</a></li>
+                            <li><span class="icon-select"></span><a data-name="WUUSD" href="#">Western Union USD</a></li>
+                            <li><span class="icon-select"></span><a data-name="ZPRUB" href="#">Z-Payment RUB</a></li>
+                        </ul>
+                    </div>
+                    <div class="most-popular-tab">
+                        <ul class="sidebar-ul">
+                            <li><span class="icon-select"></span><a href="#"><span data-name="PRUSD" class="most-popular-span most-popular-from">Payeer USD</span> <span class="ex-popular-arrow"></span><span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="YAMRUB">Yandex.Money RUB</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="PRUSD" class="most-popular-span most-popular-from">Payeer USD</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="OKUSD">OKPay USD</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="PRUSD" class="most-popular-span most-popular-from">Payeer USD</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="QWRUB">Qiwi RUB</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="PRUSD" class="most-popular-span most-popular-from">Payeer USD</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="SBERRUB">SberBank RUB</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="PRUSD" class="most-popular-span most-popular-from">Payeer USD</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="P24UAH">Privat24 UAH</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="PRUSD" class="most-popular-span most-popular-from">Payeer USD</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="CARDUAH">Card UAH</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="PRUSD" class="most-popular-span most-popular-from">Payeer USD</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="WIREUAH">Wire UAH</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WMZ" class="most-popular-span most-popular-from">Webmoney USD</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="CARDUAH">Card UAH</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WMZ" class="most-popular-span most-popular-from">Webmoney USD</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="WIREUAH">Wire UAH</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WMZ" class="most-popular-span most-popular-from">Webmoney USD</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="CARDRUB">Card RUB</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WMZ" class="most-popular-span most-popular-from">Webmoney USD</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="WIRERUB">Wire RUB</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WMZ" class="most-popular-span most-popular-from">Webmoney USD</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="RUSSTRUB">RusStandard RUB</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WMR" class="most-popular-span most-popular-from">Webmoney RUB</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="CARDUAH">Card UAH</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WMR" class="most-popular-span most-popular-from">Webmoney RUB</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="WIREUAH">Wire UAH</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WMR" class="most-popular-span most-popular-from">Webmoney RUB</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="CARDRUB">Card RUB</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WMR" class="most-popular-span most-popular-from">Webmoney RUB</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="WIRERUB">Wire RUB</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WMU" class="most-popular-span most-popular-from">Webmoney UAH</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="CARDUAH">Card UAH</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WMU" class="most-popular-span most-popular-from">Webmoney UAH</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="WIREUAH">Wire UAH</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WMU" class="most-popular-span most-popular-from">Webmoney UAH</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="CARDRUB">Card RUB</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WMU" class="most-popular-span most-popular-from">Webmoney UAH</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="WIRERUB">Wire RUB</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WMU" class="most-popular-span most-popular-from">Webmoney UAH</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="RUSSTRUB">RusStandard RUB</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WME" class="most-popular-span most-popular-from">Webmoney EUR</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="P24UAH">Privat24 UAH</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WME" class="most-popular-span most-popular-from">Webmoney EUR</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="CARDUAH">Card UAH</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WME" class="most-popular-span most-popular-from">Webmoney EUR</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="WIREUAH">Wire UAH</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WME" class="most-popular-span most-popular-from">Webmoney EUR</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="CARDRUB">Card RUB</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WME" class="most-popular-span most-popular-from">Webmoney EUR</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="WIRERUB">Wire RUB</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="WME" class="most-popular-span most-popular-from">Webmoney EUR</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="RUSSTRUB">RusStandard RUB</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="YAMRUB" class="most-popular-span most-popular-from">Yandex.Money RUB</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="PRUSD">Payeer USD</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="YAMRUB" class="most-popular-span most-popular-from">Yandex.Money RUB</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="OKUSD">OKPay USD</span></a></li>
+                            <li><span class="icon-select"></span><a href="#"><span data-name="YAMRUB" class="most-popular-span most-popular-from">Yandex.Money RUB</span> <span class="icon-table-arrow"></span><span class="most-popular-span most-popular-to" data-name="CARDUAH">Card UAH</span></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer layout-footer">
+        <div class="footer-exchanger">
+            &copy;2015 <span>Exchangers<span class=
+                                                     "footer-24">24</span></span>
+        </div>
+
+        <div class="footer-popel"><span>Дизайн и разработка
+            &mdash;&ensp;</span> <img alt="" src=
+                "images/popel-logo.png"></div>
+        <script>
+
+            var ex24_directions={"PRUSD":["YAMRUB","OKUSD","QWRUB","SBERRUB","P24UAH","CARDUAH","WIREUAH","ACRUB","CARDRUB","WIRERUB","RUSSTRUB","ECNEXUSD","PMUSD","BTCEUSD","NIXUSD"],"WMZ":["CARDUAH","WIREUAH","CARDRUB","WIRERUB","RUSSTRUB","WMR","SBERRUB","P24UAH","WMU","WME","WMB","YAMRUB","QWRUB","ACRUB","CASHUAH","CASHUSD","NTLRUSD","NTLREUR","CARDUSD","CARDEUR","TBRUB","WIREUSD","WIREEUR","CNTUSD","USTMUSD","GCMTUSD","CNTEUR"],"WMR":["CARDUAH","WIREUAH","CARDRUB","WIRERUB","SBERRUB","P24UAH","WMZ","WMU","WME","WMB","YAMRUB","QWRUB","CASHUAH","RUSSTRUB","ACRUB","NTLRUSD","NTLREUR","CARDUSD","CARDEUR","TBRUB","WIREUSD","WIREEUR","CNTUSD","USTMUSD","GCMTUSD","CNTEUR"],"WMU":["CARDUAH","WIREUAH","CARDRUB","WIRERUB","RUSSTRUB","SBERRUB","P24UAH","WMZ","WMR","WME","WMB","YAMRUB","QWRUB","ACRUB","CASHUAH","CASHUSD","NTLRUSD","NTLREUR","CARDUSD","CARDEUR","WIREUSD","WIREEUR","CNTUSD","USTMUSD","GCMTUSD","CNTEUR"],"WME":["P24UAH","CARDUAH","WIREUAH","CARDRUB","WIRERUB","RUSSTRUB","SBERRUB","WMZ","WMR","WMU","WMB","YAMRUB","QWRUB","ACRUB","CASHUAH","CASHEUR","NTLRUSD","NTLREUR","CARDUSD","CARDEUR","TBRUB","WIREUSD","WIREEUR","CNTUSD","USTMUSD","GCMTUSD","CNTEUR"],"YAMRUB":["PRUSD","OKUSD","CARDUAH","WIREUAH","CARDRUB","WIRERUB","RUSSTRUB","P24UAH","SBERRUB","WMZ","WMR","WMU","WME","WMB","QWRUB","ACRUB","CASHUAH","BTCERUB","BTCEUSD","PPUSD","CARDEUR","HLKBKZT","SBERKZT","KKBKZT","NTLRUSD","NTLREUR","CARDUSD","TBRUB","WIREUSD","WIREEUR","CNTUSD","USTMUSD","GCMTUSD","CNTEUR","NIXUSD","ECNEXUSD"],"OKUSD":["PRUSD","YAMRUB","QWRUB","ACRUB","SBERRUB","P24UAH","CARDUAH","WIREUAH","CARDRUB","WIRERUB","RUSSTRUB","BTCERUB","BTCEUSD","PPUSD","CARDEUR","HLKBKZT","SBERKZT","KKBKZT","ECNEXUSD","NIXUSD"],"QWRUB":["PRUSD","OKUSD","CARDUAH","WIREUAH","RUSSTRUB","SBERRUB","P24UAH","WMZ","WMR","WMU","WME","YAMRUB","ACRUB","CASHUAH","CARDRUB","WIRERUB","NTLRUSD","NTLREUR","PMUSD","BTCEUSD","NIXUSD","ECNEXUSD"],"SBERRUB":["PRUSD","OKUSD","P24UAH","CARDUAH","WIREUAH","WMZ","WMR","WMU","WME","YAMRUB","QWRUB","BTCEUSD","BTCERUB","PPUSD","NTLRUSD","NTLREUR","PMUSD","NIXUSD","ECNEXUSD"],"P24UAH":["PRUSD","WMZ","WMR","WMU","WME","YAMRUB","OKUSD","QWRUB","SBERRUB","CARDRUB","WIRERUB","NTLRUSD","NTLREUR"],"CARDUAH":["PRUSD","WMZ","WMR","WMU","WME","YAMRUB","QWRUB","OKUSD","SBERRUB","ACRUB","CARDRUB","WIRERUB","RUSSTRUB","BTCERUB","BTCEUSD"],"WIREUAH":["PRUSD","WMZ","WMR","WMU","WME","YAMRUB","QWRUB","OKUSD","SBERRUB","ACRUB","CARDRUB","RUSSTRUB"],"WMB":["WMZ","WMR","WMU","WME","YAMRUB"],"CASHUAH":["PRUSD","WMZ","WMR","WMU","WME","YAMRUB","OKUSD","QWRUB"],"CASHUSD":["PRUSD","WMZ","WMU","OKUSD","P24UAH"],"CASHRUB":["WMR","WMU","YAMRUB","QWRUB"],"CASHEUR":["WME"],"NTLRUSD":["QWRUB","WMZ","WME","WMR","WMU","YAMRUB","CARDUSD","CARDEUR","ACRUB","P24UAH","RUSSTRUB","SBERRUB","TBRUB","WIREUSD","WIREEUR","CNTUSD","USTMUSD","GCMTUSD","CNTEUR"],"BTCERUB":["OKUSD","PPUSD","YAMRUB","CARDEUR","CARDUAH","QWRUB","CARDRUB","SBERRUB","RUSSTRUB","WIRERUB","HLKBKZT","SBERKZT","KKBKZT"],"CARDRUB":["BTCERUB","QWRUB","YAMRUB","BTCEUSD","OKUSD","PPUSD"],"NTLREUR":["QWRUB","WMZ","WME","WMR","WMU","YAMRUB","CARDUSD","CARDEUR","ACRUB","P24UAH","RUSSTRUB","SBERRUB","TBRUB","WIREUSD","WIREEUR","CNTUSD","USTMUSD","GCMTUSD","CNTEUR"],"BTCEUSD":["OKUSD","PPUSD","QWRUB","YAMRUB","CARDEUR","CARDRUB","CARDUAH","SBERRUB","RUSSTRUB","WIRERUB","HLKBKZT","SBERKZT","KKBKZT","PMUSD","CARDUSD","WIREEUR","WIREUSD","ACRUB","AVBRUB","NIXUSD","ECNEXUSD","PRUSD"],"RUSSTRUB":["BTCEUSD","BTCERUB","OKUSD","PPUSD","YAMRUB","NTLRUSD","NTLREUR","WMZ","WME","WMR","WMU"],"HLKBKZT":["BTCEUSD","BTCERUB","OKUSD","PPUSD","YAMRUB"],"SBERKZT":["BTCEUSD","BTCERUB","OKUSD","PPUSD","YAMRUB"],"KKBKZT":["BTCEUSD","BTCERUB","OKUSD","PPUSD","YAMRUB"],"ACRUB":["NTLRUSD","NTLREUR","WMZ","WME","WMR","WMU","YAMRUB","PMUSD","BTCEUSD","NIXUSD","OKUSD","ECNEXUSD","PRUSD"],"TBRUB":["NTLRUSD","NTLREUR","WMZ","WME","WMR","WMU","YAMRUB"],"WIREUSD":["NTLRUSD","NTLREUR","WMZ","WME","WMR","WMU","YAMRUB"],"WIREEUR":["NTLRUSD","NTLREUR","WMZ","WME","WMR","WMU","YAMRUB","PMUSD","BTCEUSD"],"CNTUSD":["NTLRUSD","NTLREUR","WMZ","WME","WMR","WMU","YAMRUB"],"USTMUSD":["NTLRUSD","NTLREUR","WMZ","WME","WMR","WMU","YAMRUB"],"GCMTUSD":["NTLRUSD","NTLREUR","WMZ","WME","WMR","WMU","YAMRUB"],"CNTEUR":["NTLRUSD","NTLREUR","WMZ","WME","WMR","WMU","YAMRUB"],"PMUSD":["BTCEUSD","YAMRUB","CARDUSD","WIREEUR","WIREUSD","ACRUB","AVBRUB","WIRERUB","QWRUB","ECNEXUSD","NIXUSD","PPUSD","PMUSD","SBERRUB","PRUSD"],"SKLEUR":["PMUSD","BTCEUSD","CARDUSD","PPUSD"],"ECNEXUSD":["BTCEUSD","NIXUSD","OKUSD","PRUSD","PMUSD","QWRUB","YAMRUB","ACRUB","SBERRUB"],"NIXUSD":["ECNEXUSD","PMUSD","OKUSD","SBERRUB","ACRUB","QWRUB","YAMRUB","BTCEUSD","PRUSD"]};
+
+        </script>
+    </div><!-- partial:include('page/footer.partial.html') -->
+
+</body>
+</html>

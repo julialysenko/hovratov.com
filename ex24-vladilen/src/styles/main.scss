@@ -1,0 +1,53 @@
+/* Barebones Compass stylesheet
+ *
+ * This file is used to include all the other scss files
+ *
+ * One exception is base.scss, which itself contains other included files. This
+ * is done so you can use the same base styles with different sets of included
+ * files
+ *
+ * See individual included files for more info
+ *
+ * NOTE: This file is not meant to contain any rules directly
+ */
+
+// Base
+@import "base";
+
+// Vendor
+@import "../vendor/selectize-scss/src/selectize.scss";
+@import "../vendor/selectize-scss/src/selectize.default.scss";
+@import "../vendor/simplebar/dist/simplebar";
+
+
+// Elements
+@import "element";
+@import "element/link";
+@import "element/header";
+@import "element/list";
+@import "element/table";
+
+// Forms
+@import "form";
+@import "form/field";
+@import "form/validation";
+@import "form/button";
+
+// Standalone blocks
+@import "block";
+@import "block/index";
+@import "block/tooltips";
+// @import "block/blockname";
+@import "block/guilist";
+@import "block/about";
+// Layout styless
+@import "layout";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/aside";
+@import "layout/content";
+@import "layout/footer";
+@import "layout/cabinet";
+
+// Content styles
+@import "content";

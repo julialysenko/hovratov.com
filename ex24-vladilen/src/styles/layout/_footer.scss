@@ -1,0 +1,71 @@
+/* Barebones Compass layout styles
+ *
+ * Footer styles
+ */
+
+
+
+$layout-footer-sticky: true;
+
+
+    html,
+    body {
+        min-height: 100%;
+    }
+
+    .layout-content {
+        clear: both;
+        min-height: 100vh;
+        height: auto !important;
+        margin-bottom: -50px;
+        margin-left: 340px;
+    }
+
+    .layout-content:after {
+        content: "";
+        display: block;
+        height: 50px;
+    }
+
+    .layout-footer {
+        clear: both;
+        position: relative;
+        height:50px;
+
+    }
+
+.footer{
+    clear: both;
+    position: relative;
+    height:50px;
+    position: relative;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #1e2959;
+    vertical-align: middle;
+    padding-top: 14px;
+    z-index: 999;
+    padding-left: 340px;
+    p{
+        float: left;
+    }
+    .footer-exchanger{
+        float: left;
+        margin-left: 30px;
+        color: #5c6a91;
+
+        span{
+            color: #fff;
+        }
+        .footer-24{
+            color: #17adde;
+        }
+    }
+    .footer-popel{
+        float: right;
+        margin-right: 20px;
+
+    }
+}
+

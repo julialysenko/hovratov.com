@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+<head>
+    <!-- partial:include('page/meta.partial.html') -->
+    <title></title>
+</head>
+
+<body>
+    <div class="layout-content cabinet">
+        
+            <header class="active-header clearfix">
+                <div class="layout-container-fluid">
+                    <div class=" navbar">
+                        <ul>
+                            <li>
+                                <div class="logo">
+                                    <a href="#"><h2>Exchanger<span>24</span></h2></a>
+                                </div>
+                                <div class="dropdown dropdown-cont">
+                                    <button class="btn dropdown-button" data-target="#" data-toggle="dropdown" id="dLabel" aria-expanded="false">RU<img alt="" src="images/down-arrow.png"></button>
+                                        <ul class="dropdown-menu" style="display: none;">
+                                            <li>UA</li>
+                                            <li>ENG</li>
+                                        </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span></span><a href="my-exchanger.html" class="active-link">Мой обменник</a>
+                            </li>
+
+                            <li>
+                                <span></span><a href="program.html">Реферальная программа</a>
+                            </li>
+
+                            <li>
+                                <span></span><a href="my-account.html">Мой аккаунт</a>
+                            </li>
+
+                            <li>
+                                <span></span><a href="balance.html" class="balance-link">Баланс: <span>$4524.00</span></a>
+                                <a class="balanceup-link" type="button" data-toggle="modal" data-target="#balanceModal">Вывести</a>
+                            </li>
+                            
+                            <li>
+                                <span class="icon-exchanger24-cabinet-icons-exit"></span><a href="log-out.html">Выйти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+                
+        <div class="layout-container-fluid">
+            <div class="layout-content-main">
+                <div class="bg-img"><img alt="" src="images/bg-img.png"></div>
+                    <div class="row">
+                        <div class="tabs">
+                        <ul class="clearfix" role="tablist" id="myTabs">
+                            <li class="tab active"><a href="#exchanger-tab-firststep" role="tab" data-toggle="tab" class="directions-first active-link">Обменник</a></li>
+                            <li class="tab"><a href="#cabinet-statistics-tab" role="tab" data-toggle="tab" class="directions-second">Статистика</a></li>
+                            <li class="tab"><a href="#blacklist-tab" role="tab" data-toggle="tab" class="directions-third">Чёрный список</a></li>
+                        </ul>
+                        <div class="purple-line">
+
+                        </div>
+                    </div>
+                       <div class="tab-content">
+                           <div id="exchanger-tab-firststep" role="tabpanel" class="tab-pane fade">
+                               <p>У вас ещё нет обменника? Создайте его, нажав на кнопку</p>
+                               <button class="btn-tour">Добавить</button>
+                           </div>
+                           <div id="exchanger-tab" role="tabpanel" class="tab-pane fade exchanger-tab">
+                               <div class="row">
+                                   <div class="col-6">
+                                       <h1>Добавление обменника</h1>
+                                       <input class="exchang-input" placeholder="Название обменника" type="text">
+                                       <input class="description-input" placeholder="Описание обменника" type="text">
+                                       <input class="exchang-input" placeholder="Ссылка на обменник" type="text">
+                                       <input class="logo-input" type="image"><span class="icon-exchanger24-cabinet-icons-no-photo"></span>
+                                       <div class="logo-text">
+                                           <p>Логотип обменника</p>
+                                           <p>Файл в формате: PNG, JPG</p>
+                                           <p>Размер не более: 2 МБ</p>
+                                           <a class="link-ajax">Загрузить файл</a>
+                                       </div>
+                                   </div>
+                                   <div class="col-6">
+                                       <h2>Валюты обменника</h2>
+                                       <p>Валюты обменника определяются файлом</p>
+                                       <p>в формате XML с их перечнем.</p>
+                                       <a>Посмотреть пример форматирования документа</a>
+                                       <div class="input-link">
+                                           <input class="exchang-input" placeholder="Ссылка на файл с валютами" type="text">
+                                           <a class="link-ajax">Проверить</a>
+                                       </div>
+                                       <button class="btn" data-toggle="modal" data-target="#addExchangerModal">Добавить</button>
+                                   </div>
+                               </div>
+                           </div>
+                           <div id="exchanger-tab-next" role="tabpanel" class="tab-pane fade in active">
+                               <div class="row">
+                                   <div class="col-5">
+                                       <h1>SuperObmenka</h1>
+                                       <a style="margin-left: 10px;"><span class="icon-exchanger24-cabinet-icons-edit"></span>Редактировать</a>
+                                       <a>superobmenka.net</a>
+                                       <p>Автоматический обменник Яндекс.Деньги, Perfect Money, Liqpay. 
+                                           Моментальный вывод/ввод карты Приватбанка. 
+                                           Автоматической пополнение. выгодные курсы обмена. 
+                                           Высокое качество и скорость обслуживания. 
+                                           Партнёрская программа. Скидки постоянным клиентам.
+                                       </p>
+                                       <h2>Отзывы</h2>
+                                       <span class="icon-like"></span><span class="green-number">35</span>
+                                       <span class="icon-normal"></span><span>12</span>
+                                       <span class="icon-dislike"></span><span class="red-number">5</span>
+                                   </div>
+                                   <div class="col-2"></div>
+                                   <div class="col-5">
+                                       <div class="input-link">
+                                           <p>Документ с валютами</p>
+                                           <input class="exchang-input" placeholder="currencies.xml" type="text">
+                                           <a class="link-ajax">Изменить</a>
+                                       </div>
+                                       <div class="table">
+                                           <table class="rates-table">
+                                               <tbody><tr>
+                                                   <th class="th-head">Валюта ввода</th>
+                                                   <th class="th-head">Валюта вывода</th>
+                                                   <th>Резерв</th>
+                                               </tr>
+
+                                               <tr>
+                                                   <td>
+                                                       <span>1 </span><span class="currency">EUR</span>
+                                                   </td>
+                                                   <td>
+                                                       <span class="icon-exchanger24-cabinet-icons-arrow-right"></span><span>1.6 </span><span class="currency">USD</span>
+                                                   </td>
+                                                   <td>
+                                                       <span>20 157</span>
+                                                   </td>
+                                               </tr>
+
+                                               <tr>
+                                                   <td>
+                                                       <span>1 </span><span class="currency">ErgoPay USD</span>
+                                                   </td>
+                                                   <td>
+                                                       <span class="icon-exchanger24-cabinet-icons-arrow-right"></span><span>4.3 </span><span class="currency">ErgoPay EUR</span>
+                                                   </td>
+                                                   <td>
+                                                       <span>200 157</span>
+                                                   </td>
+                                               </tr>
+
+                                               <tr>
+                                                   <td>
+                                                       <span>1 </span><span class="currency">Payeer USD</span>
+                                                   </td>
+                                                   <td>
+                                                       <span class="icon-exchanger24-cabinet-icons-arrow-right"></span><span>24.5 </span><span class="currency">Payeer UAH</span>
+                                                   </td>
+                                                   <td>
+                                                       <span>125 343</span>
+                                                   </td>
+                                               </tr>
+
+                                               <tr>
+                                                   <td>
+                                                       <span>1 </span><span class="currency">ErgoPay USD</span>
+                                                   </td>
+                                                   <td>
+                                                       <span class="icon-exchanger24-cabinet-icons-arrow-right"></span><span>1.6 </span><span class="currency">Payeer UAH</span>
+                                                   </td>
+                                                   <td>
+                                                       <span>1 564</span>
+                                                   </td>
+                                               </tr>
+                                               </tbody>
+                                           </table>
+                                       </div>
+                               </div>
+                           </div>
+                           </div>
+                           <div id="cabinet-statistics-tab" class="tab-pane fade">
+                               <div class="row">
+                                   <div class="col-12">
+                                       <div class="table">
+                                           <table class="rates-table">
+                                               <tbody><tr>
+                                                   <div class="graphic-img"><img alt="" src="images/graphic.png"></div>
+                                                   <th><span>Количество переходов на обменник</span>
+
+                                                   <a class="link-ajax">За день</a>
+
+                                                   <a class="active-link">За месяц</a>
+
+                                                   <a class="link-ajax">Выбрать период</a></th>
+                                               </tr>
+
+                                               <tr>
+                                                   <td class="td-highlighted">
+                                                       <span class="number-span">24.00</span>
+                                                   </td>
+                                               </tr>
+
+                                               <tr>
+                                                   <td class="td-highlighted">
+                                                       <span class="number-span">23.00</span>
+                                                   </td>
+                                               </tr>
+
+                                               <tr>
+                                                   <td class="td-highlighted">
+                                                       <span class="number-span">22.00</span>
+                                                   </td>
+                                               </tr>
+
+                                               <tr>
+                                                   <td class="td-highlighted">
+                                                       <span class="number-span">21.00</span>
+                                                   </td>
+                                               </tr>
+
+                                               <tr>
+                                                   <td class="td-highlighted">
+                                                       <span class="number-span">20.00</span>
+                                                   </td>
+                                               </tr>
+
+                                               <tr>
+                                                   <td class="td-highlighted">
+                                                       <span class="number-span">19.00</span>
+                                                   </td>
+                                               </tr>
+                                               </tbody>
+
+                                               <tr>
+                                                   <td class="td-highlighted">
+                                                       <span class="number-last">01.12</span>
+                                                       <span class="number-last">05.12</span>
+                                                       <span class="number-last">10.12</span>
+                                                       <span class="number-last">15.12</span>
+                                                       <span class="number-last">20.12</span>
+                                                       <span class="number-last">25.12</span>
+                                                   </td>
+                                               </tr>
+                                               </tbody>
+                                           </table>
+                                       </div>
+                                   </div>
+                               </div>
+
+                           </div>
+
+                           <div id="blacklist-tab" class="tab-pane fade">
+                               <div class="row">
+                                   <div class="col-12">
+                                       <a class="addblacklist" type="button" data-toggle="modal" data-target="#addBlacklistModal"><span class="icon-exchanger24-cabinet-icons-fraud"></span>Добавить мошенника</a>
+                                       <div class="table">
+                                           <table class="rates-table">
+                                               <tbody><tr>
+                                                   <th>Данные мошенника</th>
+                                                   <th>Кошельки</th>
+                                                   <th>Комментарий</th>
+                                                   <th>Добавил</th>
+                                               </tr>
+
+                                               <tr>
+                                                   <td>
+                                                       <p>Карпов Виталий</p>
+                                                       <a class="table-link">karpemoney@yandex.ru</a>
+                                                       <p>+380 50 578 27 28</p>
+                                                   </td>
+                                                   <td>
+                                                       <p>PM: U4352455</p>
+                                                       <p>Альфа-Банк:</p>
+                                                       <p>1245045387456669875</p>
+                                                   </td>
+                                                   <td class="td-comments">
+                                                       <p>Данный клиент является</p>
+                                                       <p>мошенником и заблокирован по</p>
+                                                       <p>требованию СБ QIWI <a>Подробнее</a></p>
+                                                   </td>
+                                                   <td>
+                                                       <p>WMBuySell</p>
+                                                   </td>
+                                               </tr>
+
+                                               <tr>
+                                                   <td>
+                                                       <a>gleb20994@gmail.com</a>
+                                                   </td>
+                                                   <td>
+                                                       <p>QIWI: 1568756236</p>
+                                                       <p>QIWI: 15687562789</p>
+                                                   </td>
+                                                   <td class="td-comments">
+                                                       <p>Взлом перфекта и вывод на киви.</p> 
+                                                       <p>На все кошельки есть жалобы.</p>
+                                                   </td>
+                                                   <td>
+                                                       <p>WMBuySell</p>
+                                                   </td>
+                                               </tr>
+
+                                               <tr>
+                                                   <td>
+                                                       <a>rebelrebel2012@gmail.com</a>
+                                                   </td>
+                                                   <td>
+                                                       <p>U746571678</p>
+                                                       <p>U746571679</p>
+                                                       <p>U746571680</p>
+                                                       <a>Показать все</a>
+                                                   </td>
+                                                   <td class="td-comments">
+                                                       <p>Взлом перфекта и вывод на киви.</p> 
+                                                       <p>На все кошельки есть жалобы.</p>
+                                                   </td>
+                                                   <td>
+                                                       <p>WMBuySell</p>
+                                                   </td>
+                                               </tr>
+
+                                               <tr>
+                                                   <td>
+                                                       <p>Береза Дмитрий</p>
+                                                       <p>Александрович, Darien</p>
+                                                       <a class="table-link">darien@yandex.ru</a>
+                                                       <p>+380 93 549 13 23</p>
+                                                   </td>
+                                                   <td>
+                                                       <p>Карта ПриватБанк</p>
+                                                       <p>Украина</p>
+                                                       <p>5463134567826784</p>
+                                                   </td>
+                                                   <td class="td-comments">
+                                                       <p>Данный клиент является</p>
+                                                       <p>мошенником и заблокирован по</p>
+                                                       <p>требованию СБ QIWI <a>Подробнее</a></p>
+                                                   </td>
+                                                   <td>
+                                                       <p>WMBuySell</p>
+                                                   </td>
+                                               </tr>
+                                               </tbody>
+                                           </table>
+                                       </div>
+                                       <nav class="pagination-block">
+                                           <ul class="pagination">
+                                               <li class="nav-home">
+                                                   <a href="#" aria-label="home">
+                                                       <span class="icon-exchanger24-cabinet-icons-double-arrow-left"></span>
+                                                   </a>
+                                               </li>
+                                               <li class="nav-prev">
+                                                   <a href="#" aria-label="Previous">
+                                                       <span class="icon-exchanger24-cabinet-icons-arrow-left" aria-hidden="true"></span>
+                                                   </a>
+                                               </li>
+                                               <li><a class="active" href="#1">3</a></li>
+                                               <li><a href="#2">4</a></li>
+                                               <li><a href="#3">5</a></li>
+                                               <li><a href="">6</a></li>
+                                               <li><a href="#86">7</a></li>
+                                               <li class="nav-next">
+                                                   <a href="#" aria-label="Next">
+                                                       <span class="icon-exchanger24-cabinet-icons-arrow-right" aria-hidden="true"></span>
+                                                   </a>
+                                               </li>
+                                               <li class="nav-end">
+                                                 <a href="#" aria-label="end">
+                                                     <span class="icon-exchanger24-cabinet-icons-double-arrow-right"></span>
+                                                 </a>
+                                               </li>
+                                           </ul>
+                                       </nav>
+                                   </div>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer layout-footer">
+        <div class="footer-exchanger">
+            &copy;2015 <span>Exchangers<span class=
+                                                     "footer-24">24</span></span>
+        </div>
+
+        <div class="footer-popel"><span>Дизайн и разработка
+            &mdash;&ensp;</span> <img alt="" src=
+                "images/popel-logo.png"></div>
+    </div><!-- partial:include('page/footer.partial.html') -->
+    <script>
+
+
+
+    </script>
+    <div class="modal fade" id="balanceModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-exchanger24-cabinet-icons-close-modal" aria-hidden="true"></span></button>
+                    <div class="modal-loader"></div>
+                        <h2 class="modal-title">Вывод средств</h2>
+                        <label>Сумма</label>
+                        <div class="checkbox-group top">
+                            <input type="checkbox" id="toggle1" name="toggle">
+                            <label for="toggle1" class="checkbox-label">Снять всё</label>
+                        </div>
+                        <input class="exchang-input" value="34" type="text"><span class="currency">USD</span>
+                        <label>Кошелёк для вывода средств</label>
+                        <input class="exchang-input" value="U572757368" type="text">
+                        <input type="checkbox" id="toggle2" name="toggle">
+                        <div class="checkbox-group">
+                            <label for="toggle2" class="checkbox-label">Сохранить шаблон</label>
+                        </div>
+                        <button class="btn">Вывести средства</button>
+                </div>
+           </div>
+       </div>
+    </div>
+    <div class="modal fade" id="addExchangerModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+             <div class="modal-content">         
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-exchanger24-cabinet-icons-close-modal" aria-hidden="true"></span></button>
+                    <div class="modal-loader"></div>
+                    <h2 class="modal-title">Добавляется обменник</h2>
+                    <p>
+                       Мы проверяем загруженный файл на правильность формата и структуры. 
+                       Все опознанные валюты будут отображаться в этом окне
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addBlacklistModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-exchanger24-cabinet-icons-close-modal" aria-hidden="true"></span></button>
+                    <div class="modal-loader"></div>
+                        <h2 class="modal-title">Добавление мошенника</h2>
+                        <input class="exchang-input" placeholder="Имя мошенника" type="text">
+                        <input class="exchang-input" placeholder="Данные мошенника" type="text">
+                        <input class="exchang-input big" placeholder="Кошельки" type="text">
+                        <input class="exchang-input big" placeholder="Комментарий" type="text">
+                        <button class="btn">Добавить мошенника</button>
+                </div>
+           </div>
+       </div>
+   </div>
+</body>
+</html>

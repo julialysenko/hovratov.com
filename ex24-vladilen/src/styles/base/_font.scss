@@ -1,0 +1,242 @@
+/* Barebones Compass fonts
+ *
+ * This file contains custom font imports and font stacks for different font
+ * types
+ */
+
+/* Examples of font import statements
+ *
+ * Copy and paste outside of comment section
+ *
+ * Google Fonts single font face
+ * @see http://www.google.com/fonts
+ *
+ *     @import url(http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext);
+ *
+ * Google Fonts combination of font faces
+ * @see http://www.google.com/fonts
+ *
+ *     @import url(http://fonts.googleapis.com/css?family=Roboto:400,700|PT+Serif:400,700&subset=latin,cyrillic,cyrillic-ext);
+ *
+ * Compass' font-face mixin with local font files
+ * @see http://compass-style.org/reference/compass/css3/font_face/
+ * @see http://compass-style.org/reference/compass/helpers/font-files/
+ * @see http://www.fontsquirrel.com/tools/webfont-generator
+ *
+ *     // Regular
+ *     @include font-face(
+ *         "My Font",
+ *         font-files("myfont.woff", "myfont.ttf", "myfont.svg"),
+ *         "myfont.eot"
+ *     );
+ *
+ *     // Bold
+ *     @include font-face(
+ *         "My Font",
+ *         font-files("myfontb.woff", "myfontb.ttf", "myfontb.svg"),
+ *         "myfontb.eot", bold
+ *     );
+ *
+ *     // Italic
+ *     @include font-face(
+ *         "My Font",
+ *         font-files("myfontb.woff", "myfontb.ttf", "myfontb.svg"),
+ *         "myfontb.eot", normal, italic
+ *     );
+ *
+ *     // Bold+Italic
+ *     @include font-face(
+ *         "My Font",
+ *         font-files("myfontb.woff", "myfontb.ttf", "myfontb.svg"),
+ *         "myfontb.eot", bold, italic
+ *     );
+ *
+ *     // Custom font weight
+ *     @include font-face(
+ *         "My Font",
+ *         font-files("myfontb.woff", "myfontb.ttf", "myfontb.svg"),
+ *         "myfontb.eot", 300
+ *     );
+ */
+
+/* Default font stacks
+ */
+// http://fontfamily.io/Helvetica_Neue,Helvetica,Arial,sans-serif
+// http://fontfamily.io/Arial,Helvetica_Neue,Helvetica,sans-serif
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800&subset=latin,cyrillic);
+$font-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-serif: Cambria, Georgia, serif;
+$font-monospace: Consolas, monaco, monospace;
+
+
+@font-face {
+  font-family: "exchange";
+  src:url("../fonts/exchange.eot");
+  src:url("../fonts/exchange.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/exchange.woff") format("woff"),
+  url("../fonts/exchange.ttf") format("truetype"),
+  url("../fonts/exchange.svg#exchange") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "exchange" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="ex-"]:before,
+[class*=" ex-"]:before {
+  font-family: "exchange" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ex-statistics:before {
+  content: "\61";
+}
+.ex-arrow:before {
+  content: "\62";
+}
+.ex-rate:before {
+  content: "\63";
+}
+.ex-notifications:before {
+  content: "\64";
+}
+.ex-popular-arrow:before {
+  content: "\65";
+}
+.ex-cc:before {
+  content: "\66";
+}
+.ex-tag-comment:before {
+  content: "\67";
+}
+.ex-person:before {
+  content: "\68";
+}
+.ex-check:before {
+  content: "\69";
+}
+.ex-mail:before {
+  content: "\6a";
+}
+.ex-phone:before {
+  content: "\6b";
+}
+@font-face {
+  font-family: "exchange-c";
+  src:url("../fonts/exchange-c.eot");
+  src:url("../fonts/exchange-c.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/exchange-c.woff") format("woff"),
+  url("../fonts/exchange-c.ttf") format("truetype"),
+  url("../fonts/exchange-c.svg#exchange-c") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "exchange-c" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "exchange-c" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dislike:before {
+  content: "\61";
+}
+.icon-exchanger24-cabinet-icons-arrow-left:before {
+  content: "\62";
+}
+.icon-exchanger24-cabinet-icons-arrow-right:before {
+  content: "\63";
+}
+.icon-exchanger24-cabinet-icons-check:before {
+  content: "\64";
+}
+.icon-exchanger24-cabinet-icons-close-modal:before {
+  content: "\65";
+}
+.icon-exchanger24-cabinet-icons-copy:before {
+  content: "\66";
+}
+.icon-exchanger24-cabinet-icons-double-arrow-left:before {
+  content: "\67";
+}
+.icon-exchanger24-cabinet-icons-double-arrow-right:before {
+  content: "\68";
+}
+.icon-exchanger24-cabinet-icons-edit:before {
+  content: "\69";
+}
+.icon-exchanger24-cabinet-icons-esc:before {
+  content: "\6a";
+}
+.icon-exchanger24-cabinet-icons-exit:before {
+  content: "\6b";
+}
+.icon-exchanger24-cabinet-icons-fraud:before {
+  content: "\6c";
+}
+.icon-exchanger24-cabinet-icons-info:before {
+  content: "\6d";
+}
+.icon-exchanger24-cabinet-icons-logotype:before {
+  content: "\6e";
+}
+.icon-exchanger24-cabinet-icons-mail:before {
+  content: "\6f";
+}
+.icon-exchanger24-cabinet-icons-no-photo:before {
+  content: "\70";
+}
+.icon-exchanger24-cabinet-icons-phone:before {
+  content: "\71";
+}
+.icon-exchanger24-cabinet-icons-sort-triangle:before {
+  content: "\72";
+}
+.icon-like:before {
+  content: "\73";
+}
+.icon-normal:before {
+  content: "\74";
+}
+
+

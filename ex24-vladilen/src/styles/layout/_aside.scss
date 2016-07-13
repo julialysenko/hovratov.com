@@ -1,0 +1,201 @@
+/* Barebones Compass layout styles
+ *
+ * Aside styles
+ */
+
+.layout-aside {
+    display: block;
+    width: $aside-width;
+    background: #070724;
+    padding-left:30px;
+    height:100%;
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1100;
+    .all-directions-tab{
+        @extend %clearfix
+    }
+}
+.sidebar-choice{
+    position: absolute;
+    bottom: 0;
+    top: 202px;
+    width: 310px;
+}
+.sidebar-ul{
+    float: left;
+    font-family: Open Sans;
+    font-size: 13px;
+    &:first-child{
+        margin-right: 0px;
+    }
+    li{
+        display: block;
+        position: relative;
+        text-align: left;
+    }
+    @extend %clearfix;
+}
+
+.connecter{
+        float: left;
+        width: 20px;
+        height: 81px;
+        position: relative;
+        margin: 60px 0;
+
+    .icon-connecter, .icon-connecter-horisontal, .icon-connecter-vertical{
+        position: absolute;
+
+    }
+    .icon-connecter{
+        visibility: hidden;
+    }
+
+        .dublicate1{
+            visibility: hidden;
+            top:0;
+            left: 0;
+        }
+    .dublicate2{
+        visibility: hidden;
+            top:0;
+            left: 11px;
+        }
+    .dublicate3{
+        visibility: hidden;
+            top:41px;
+            left: 0;
+        }
+    .dublicate4{
+        visibility: hidden;
+        top:41px;
+        left: 11px;
+    }
+     .dublicate5{
+         visibility: hidden;
+            top:82px;
+            left: 0;
+        }
+    .dublicate6{
+        visibility: hidden;
+        top:82px;
+        left: 11px;
+    }
+    .icon-connecter-vertical{
+        visibility: hidden;
+        left:10px;
+    }
+    }
+.icon-inform{
+    position: relative;
+    float: right;
+    opacity: 0.6;
+    &:hover{
+        opacity: 1;
+    }
+
+}
+
+
+.left-part{
+    width: 132px;
+    min-height: 200px;
+}
+
+.selected-left-part:after{
+    content: "";
+    position: absolute;
+    left: 132px;
+    top: 100%;
+    margin-top: -1px;
+    height: 1px;
+    width: 10px;
+    background: #114b7a;
+    transition: top 0.5s ease;
+
+
+
+}
+
+.selected-right-part:before{
+    content: "";
+    position: absolute;
+    right: 132px;
+    top: 100%;
+    margin-top: -1px;
+    height: 1px;
+    width: 10px;
+    background: #114b7a;
+    transition: top 0.5s ease;
+
+}
+.connecter-inactive{
+
+}
+.connecter-line{
+    content: "";
+    position: absolute;
+    height: 83px;
+    width: 1px;
+    left: 10px;
+    background: #114b7a;
+    visibility: hidden;
+    transition: all 0.4s ease;
+
+}
+.sidebar-ul a {
+        color: #a5a5aa;
+        display: block;
+        width: 132px;
+        border-bottom: 1px solid #262653;
+        line-height: 30px;
+        transition: all 0.3s ease;
+        &:last-child{
+                line-height: 28px;
+                padding-bottom: 2px;
+            }
+    &.active {
+        color:#148db1 !important;
+        border-bottom: 1px solid #114b7a !important;
+    }
+
+}
+.sidebar-ul a:hover{
+    color:#148db1;
+    border-bottom: 1px solid #09507d;
+
+            }
+.icon-select{
+    opacity: 0;
+    transition: opacity .3s linear;
+}
+.icon-select-ul-bg{
+    position: absolute;
+    bottom: 0;
+    opacity: 0.9;
+    left: -8px;
+    background-image: url(../images/icon-select.png);
+    background-position: bottom center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    }
+.logo a{
+    color: #fff !important;
+}
+
+
+
+
+
+
+
+
+
+
+

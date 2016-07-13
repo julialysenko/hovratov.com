@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+<head>
+    <!-- partial:include('page/meta.partial.html') -->
+    <title></title>
+</head>
+
+<body>
+    <div class="layout-content cabinet">
+        
+            <header class="active-header clearfix">
+                <div class="layout-container-fluid">
+                    <div class=" navbar">
+                        <ul>
+                            <li>
+                                <div class="logo">
+                                    <a href="#"><h2>Exchanger<span>24</span></h2></a>
+                                </div>
+                                <div class="dropdown dropdown-cont">
+                                    <button class="btn dropdown-button" data-target="#" data-toggle="dropdown" id="dLabel" aria-expanded="false">RU<img alt="" src="images/down-arrow.png"></button>
+                                        <ul class="dropdown-menu" style="display: none;">
+                                            <li>UA</li>
+                                            <li>ENG</li>
+                                        </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span></span><a href="my-exchanger.html">Мой обменник</a>
+                            </li>
+
+                            <li>
+                                <span></span><a href="program.html" class="active-link">Реферальная программа</a>
+                            </li>
+
+                            <li>
+                                <span></span><a href="my-account.html">Мой аккаунт</a>
+                            </li>
+
+                            <li>
+                                <span></span><a href="balance.html" class="balance-link">Баланс: <span>$4524.00</span></a>
+                                <a class="balanceup-link" type="button" data-toggle="modal" data-target="#balanceModal">Вывести</a>
+                            </li>
+                            
+                            <li>
+                                <span class="icon-exchanger24-cabinet-icons-exit"></span><a href="log-out.html">Выйти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+                
+        <div class="layout-container-fluid">
+            <div class="layout-content-main account">
+                <div class="bg-img"><img alt="" src="images/bg-img.png"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Личные данные</h2>
+                            <div class="form-group">
+                                <label>Имя</label>
+                                <input class="account-input" placeholder="Валентина" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Фамилия</label>
+                                <input class="account-input" placeholder="Григоренко" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>E-mail</label>
+                                <input class="account-input" placeholder="val-grigorenko@gmail.com" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Безопасность</h2>
+                            <div class="form-group">
+                                <label>Пароль</label>
+                                <input class="account-input" type="password" value="12345">
+                            </div>
+                            <div class="form-group">
+                                <label>Новый пароль</label>
+                                <input class="account-input" type="password">
+                            </div>
+                            <div class="form-group">
+                                <label>Подтвердите новый пароль</label>
+                                <input class="account-input" type="password">
+                            </div>
+                            <button class="btn">Сохранить изменения</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer layout-footer">
+        <div class="footer-exchanger">
+            &copy;2015 <span>Exchangers<span class=
+                                                     "footer-24">24</span></span>
+        </div>
+
+        <div class="footer-popel"><span>Дизайн и разработка
+            &mdash;&ensp;</span> <img alt="" src=
+                "images/popel-logo.png"></div>
+    </div><!-- partial:include('page/footer.partial.html') -->
+    <script>
+
+
+
+    </script>
+    <div class="modal fade" id="balanceModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-exchanger24-cabinet-icons-close-modal" aria-hidden="true"></span></button>
+                    <div class="modal-loader"></div>
+                        <h2 class="modal-title">Вывод средств</h2>
+                        <label>Сумма</label>
+                        <div class="checkbox-group top">
+                            <input type="checkbox" id="toggle1" name="toggle">
+                            <label for="toggle1" class="checkbox-label">Снять всё</label>
+                        </div>
+                        <input class="exchang-input" value="34" type="text"><span class="currency">USD</span>
+                        <label>Кошелёк для вывода средств</label>
+                        <input class="exchang-input" value="U572757368" type="text">
+                        <input type="checkbox" id="toggle2" name="toggle">
+                        <div class="checkbox-group">
+                            <label for="toggle2" class="checkbox-label">Сохранить шаблон</label>
+                        </div>
+                        <button class="btn">Вывести средства</button>
+                </div>
+           </div>
+       </div>
+</body>
+</html>
