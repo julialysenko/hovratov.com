@@ -1,0 +1,1835 @@
+@charset "UTF-8";
+
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+/**
+ * 1. Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+/**
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active, a:hover {
+  outline: 0; }
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+/**
+ * Addresses styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+sup {
+  top: -0.5em; }
+sub {
+  bottom: -0.25em; }
+/* Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 8/9/10.
+ * 2. Improves image quality when scaled in IE 7.
+ */
+img {
+  border: 0; }
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *  Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ * 4. Improves appearance and consistency in all browsers.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *  and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *  `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *  Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ *  Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */ }
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Corrects text not wrapping in Firefox 3.
+ * 4. Corrects alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+td,
+th {
+  padding: 0; }
+/* Barebones fonts
+ *
+ * This file contains custom font imports and font stacks for different font
+ * types
+ */
+/* Examples of font import statements
+ *
+ * Copy and paste outside of comment section
+ *
+ * Google Fonts single font face
+ * @see http://www.google.com/fonts
+ *
+ *     @import url(http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext);
+ *
+ * Google Fonts combination of font faces
+ * @see http://www.google.com/fonts
+ *
+ *     @import url(http://fonts.googleapis.com/css?family=Roboto:400,700|PT+Serif:400,700&subset=latin,cyrillic,cyrillic-ext);
+ *
+ *
+ *     // Example of mixin usage
+ *	   @include font-face(YourAwesomeFont, '/fonts/your-awesome-font/your-awesome-font-regular');
+ *     @include font-face(YourAwesomeFont, '/fonts/your-awesome-font/your-awesome-font-bold', bold);
+ *     @include font-face(YourAwesomeFont, '/fonts/your-awesome-font/your-awesome-font-italic', normal, italic);
+ */
+/* Default font stacks
+ */
+/* Barebones Compass variables
+ *
+ * This file should be used to redefine values used by other files. Most basic
+ * style tweaks can be done from this file
+ *
+ * Font stacks are defined within base/_font.scss
+ */
+/* Base typography settings
+ */
+/* Base visual settings
+ */
+/* Base layout settings
+ */
+/* Sprite settings
+ */
+/* Link settings
+ */
+/* Button settings
+ */
+/* Layout settings
+ */
+/* Layout grid settings
+ *
+ * NOTE: grid container is usually placed inside .layout-container element. This
+ * means the grid is limited by $layout-container-width. That is why the following
+ * condition should be met:
+ *
+ *     $width:   $layout-grid-column-width;
+ *     $columns: $layout-grid-columns;
+ *     $spacing: $layout-grid-column-spacing;
+ *
+ *     $layout-container-width == ($width * $columns) + ($spacing * ($columns - 1))
+ */
+/* Sticky footer settings
+ *
+ * To use sticky footer, set the following value to true. Layout footer height
+ * setting is required for the sticky footer to work
+ *
+ * Your layout markup should only have two elements within the body:
+ * .layout-content and .layout-footer. All other elements should be within
+ * .layout-content
+ */
+/* Barebones Compass functions
+ *
+ * Contains custom functions in use within the project
+ *
+ * See individual functions for more info
+ */
+/* PX to REM function
+ *
+ * This function is used to calculate rem value based on base font size value:
+ *
+ *     .my-class {
+ *         font-size: rem(24px);
+ *     }
+ *
+ * @uses $base-font-size as the default $base value
+ */
+/* Barebones Compass mixins
+ *
+ * Contains custom mixins in use within the project
+ *
+ * See individual mixins for more info
+ */
+/* Base diff mixin
+ *
+ * Redefines basic typography settings and background, but only if they differ
+ * from base values:
+ *
+ *     .my-class {
+ *         base-diff(#000, $font-sans-serif, 32px);
+ *     }
+ *
+ * Base values are defined in base/_variable.scss
+ *
+ * @uses $base-color
+ * @uses $base-font-family
+ * @uses $base-font-size
+ * @uses $base-font-style
+ * @uses $base-font-weight
+ * @uses $base-line-height
+ * @uses $base-background-color
+ */
+/* Vertical centering mixin
+ *
+ * This mixin allows content to be centered within a container element:
+ *
+ *     .my-container-class {
+ *         @include vertical-center ('.my-child-element');
+ *     }
+ *
+ * NOTE: depending on font-size and font-family, you might need to adjust
+ * the pseudo-element's left margin:
+ *
+ *     .my-container-class {
+ *         @include vertical-center ('.my-child-element', -0.3em);
+ *     }
+ */
+/* Text inputs mixin
+ *
+ * This mixin allows to style all textual inputs with a simple selector:
+ *
+ *     @include text-input {
+ *         color: #ccc;
+ *     }
+ *
+ * Currently includes text, password, email, number, search, tel and url input
+ * types
+ */
+/* Clearfix mixin
+ *
+ * Extend this to get a clearfix after element:
+ *
+ *     .my-element {
+ *         @extend %clearfix;
+ *     }
+ */
+.layout-container:after, .layout-container-fluid:after, .row:after {
+  content: "";
+  display: table;
+  clear: both; }
+/* List-reset mixin
+ *
+ * Extend this to reset a list element (ul, ol etc):
+ *
+ *     ul.my-list {
+ *         @extend list-reset;
+ *     }
+ */
+/* Responsive styles mixin
+ *
+ * This mixin allows to style the element for certain devices. Developers are
+ * meant to edit available devices (their names and media queries) within the
+ * mixin before using it in their styles:
+ *
+ *     .my-element {
+ *         width: 940px;
+ *         margin: 0 auto;
+ *
+ *         @include respond(tablet) {
+ *             // Stretch to full width on tablets
+ *             width: auto;
+ *             margin: 0 10px;
+ *         }
+ *     }
+ */
+/* Font-face mixin
+ *
+ * Taken from: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss
+ * Order of the includes matters, and it is: normal, bold, italic, bold+italic.
+ *
+ */
+/* Barebones Compass link mixins
+ *
+ * Contains custom link mixins in use within the project
+ *
+ * See individual mixins for more info
+ */
+/* Link transitions
+ *
+ * Set to false to disable link transitions
+ */
+/* Link transition duration
+ *
+ * Defines link transition duration
+ */
+/* Link transition function
+ *
+ * Defines link transition function
+ */
+/* Basic link mixin
+ *
+ * Defines font colors for basic link states: visited, hover and active. By
+ * default, focus state is the same as hover state, but you can set a different
+ * color for focus state
+ *
+ * @uses $link-transitions
+ * @uses $link-transition-duration
+ * @uses $link-transition-function
+ */
+/* Bordered link mixin
+ *
+ * Defines font and bottom border colors for basic link states: visited, hover
+ * and active. By default, focus state is the same as hover state, but you can
+ * set a different color for focus state
+ *
+ * @uses $link-transitions
+ * @uses $link-transition-duration
+ * @uses $link-transition-function
+ */
+/* Barebones Compass triangle mixin
+ *
+ * Contains custom triangle mixin in use within the project
+ */
+/* Triangle mixin
+ *
+ * This mixin helps drawing triangles with borders.
+ *
+ *     .my-class {
+ *         triangle(15px, #ccc, bottom);
+ *     }
+ *
+ * TODO: write docs
+ */
+/* Barebones Compass button mixins
+ *
+ * Contains custom button mixins in use within the project
+ *
+ * See individual mixins for more info
+ */
+/* Button transitions
+  *
+  * Set to false to disable button transitions
+  */
+/* Button transition duration
+ *
+ * Defines button transition duration
+ */
+/* Button transition function
+ *
+ * Defines button transition function
+ */
+/* Basic button mixin
+ *
+ * Defines font and background colors for basic color states: hover, active and
+ * disabled. By default, focus state is the same as hover state, but you can set
+ * different colors for focus state. By default, disabled state is inactive
+ *
+ * @uses $button-transitions
+ * @uses $button-transition-duration
+ * @uses $button-transition-function
+ */
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat; }
+.icon-barebones {
+  background-image: url(../sprites/barebones.png); }
+/* Barebones Compass element styles
+ *
+ * General element styles
+ */
+/* Html styles
+ *
+ * Html uses base styles, which are inherited globally
+ */
+html {
+  color: #555;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  background-color: #fff;
+  box-sizing: border-box; }
+html *,
+  html *:before,
+  html *:after {
+    box-sizing: inherit; }
+::-moz-selection {
+  color: #fff;
+  background-color: #177ee6; }
+::selection {
+  color: #fff;
+  background-color: #177ee6; }
+/* Custom element styles
+ */
+p {
+  margin: 20px 0; }
+figure {
+  text-align: center;
+  margin: 30px 0; }
+figure img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%; }
+figcaption {
+  margin: 10px 0; }
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #ccc; }
+/* Barebones Compass link styles
+ *
+ * Link element styles
+ */
+a {
+  text-decoration: underline;
+  color: #177ee6;
+  transition: color 0.15s linear; }
+a:visited {
+    color: #5777d9; }
+a:hover, a:focus {
+    color: #14ccad; }
+a:active {
+    color: #3d5266; }
+/* Segmented link
+ *
+ * Intended for use with icons to avoid icons being underlined:
+ *
+ *     <a class="link-segmented" href="/profile.html">
+ *         <span class="icon-user"></span>
+ *         <span class="segment-text">Profile</span>
+ *     </a>
+ */
+.link-segmented {
+  text-decoration: none; }
+.link-segmented .segment-text {
+    text-decoration: underline; }
+/* Ajax link
+ *
+ * A dotted border is used to underline the link
+ *
+ * @uses $link-transitions
+ * @uses $link-transition-duration
+ * @uses $link-transition-function
+ */
+.link-ajax {
+  color: #177ee6;
+  text-decoration: none;
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
+  transition: color 0.15s linear, border-bottom-color 0.15s linear; }
+.link-ajax:visited {
+    color: #5777d9;
+    border-bottom-color: #5777d9; }
+.link-ajax:hover, .link-ajax:focus {
+    color: #14ccad;
+    border-bottom-color: #14ccad; }
+.link-ajax:active {
+    color: #3d5266;
+    border-bottom-color: #3d5266; }
+.link-ajax.link-segmented {
+    border-bottom: 0;
+    transition: color 0.15s linear; }
+.link-ajax.link-segmented .segment-text {
+      border-bottom: 1px 1px #177ee6;
+      transition: border-bottom-color 0.15s linear; }
+.link-ajax.link-segmented:visited .segment-text {
+      border-bottom-color: #5777d9; }
+.link-ajax.link-segmented:hover .segment-text, .link-ajax.link-segmented:focus .segment-text {
+      border-bottom-color: #14ccad; }
+.link-ajax.link-segmented:active .segment-text {
+      border-bottom-color: #3d5266; }
+/* Barebones Compass header styles
+ *
+ * Header element styles
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  line-height: 1.33;
+  margin: 20px 0; }
+h1,
+h2,
+h3 {
+  margin-top: 35px; }
+h1 {
+  font-size: 2.25rem; }
+h2 {
+  font-size: 1.875rem; }
+h3 {
+  font-size: 1.5rem; }
+h4 {
+  font-size: 1.125rem; }
+h5 {
+  font-size: 1rem; }
+h6 {
+  font-size: 0.875rem; }
+/* Barebones Compass list styles
+ *
+ * List element styles
+ */
+ul,
+ol {
+  margin: 20px 0;
+  padding: 0;
+  padding-left: 20px; }
+ul.list-unstyled,
+  ol.list-unstyled {
+    padding-left: 0;
+    list-style: none; }
+li {
+  margin: 10px 0; }
+/* Barebones Compass table styles
+ *
+ * Table element styles
+ */
+table {
+  width: 100%; }
+td,
+th {
+  text-align: left;
+  padding: 10px 0;
+  padding-right: 10px;
+  vertical-align: top; }
+td.center,
+  th.center {
+    text-align: center; }
+td.right,
+  th.right {
+    text-align: right; }
+th {
+  font-weight: bold; }
+thead th {
+    border-bottom: 1px solid #ccc; }
+tfoot {
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 1px 0 1px 0; }
+/* Barebones Compass form styles
+ *
+ * General form styles
+ */
+select,
+label {
+  cursor: pointer; }
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 3px 0 0;
+  line-height: normal; }
+.form {
+  margin: 0; }
+.form-container {
+  margin: 20px 0; }
+/* Barebones Compass form styles
+ *
+ * Form field styles
+ */
+/*
+ * Local variables for form elements
+ */
+/*
+ * Styles starts here
+ */
+.form-group {
+  margin-bottom: 20px; }
+label {
+  margin-bottom: 5px;
+  display: inline-block; }
+.form-control {
+  margin: 0;
+  outline: 0;
+  border: 1px solid #d7d7d7;
+  padding: 4px 9px;
+  transition: border-color .15s linear;
+  display: block;
+  width: 100%;
+  height: 30px; }
+.form-control:focus {
+    border-color: #177ee6; }
+.form-control::-webkit-input-placeholder {
+    color: #999; }
+.form-control::-moz-placeholder {
+    color: #999; }
+.form-control:-ms-input-placeholder {
+    color: #999; }
+.form-control::placeholder {
+    color: #999; }
+select.form-control {
+  padding-left: 4px;
+  padding-right: 4px; }
+textarea.form-control {
+  height: auto;
+  min-width: 100%;
+  min-height: 100px; }
+/*
+ * Standart input elements
+ */
+/*
+ * Custom input elements
+ */
+input[type="radio"],
+input[type="checkbox"],
+input[type="file"] {
+  display: none; }
+/*
+ * Custom radio button
+ */
+input[type="radio"] + label {
+  padding-left: 25px;
+  color: #555;
+  display: inline-block;
+  width: auto; }
+input[type="radio"] + label:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -5px 10px 0 -25px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px #ccc, 0 0 0 7px transparent inset;
+    transition: box-shadow .15s linear; }
+input[type="radio"] + label:hover:before, input[type="radio"] + label:focus:before {
+    box-shadow: 0 0 0 2px #61BD7E, 0 0 0 7px transparent inset; }
+input[type="radio"]:checked + label:before {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #ccc, 0 0 0 7px #61BD7E inset; }
+/*
+ * Custom checkbox
+ */
+input[type="checkbox"] + label {
+  padding-left: 25px;
+  color: #555;
+  display: inline-block;
+  width: auto; }
+input[type="checkbox"] + label:before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -5px 10px 0 -25px;
+    border: 2px solid #ccc;
+    transition: border-color .15s linear; }
+input[type="checkbox"] + label:hover:before, input[type="checkbox"] + label:focus:before {
+    border-color: #61BD7E; }
+input[type="checkbox"]:checked + label:before {
+  content: "\2713";
+  border-color: transparent;
+  font-size: 20px;
+  line-height: 16px;
+  color: #61BD7E; }
+/*
+ * Toggle
+ */
+input[type="checkbox"].toggle + label {
+  padding-left: 25px;
+  color: #555;
+  display: inline-block;
+  width: auto;
+  position: relative;
+  cursor: pointer; }
+input[type="checkbox"].toggle + label:before {
+    content: "";
+    width: 25px;
+    height: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -5px 10px 0 -25px;
+    background: #ccc;
+    transition: all .15s linear; }
+input[type="checkbox"].toggle + label:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    top: 5px;
+    left: 0;
+    border: 2px solid #ccc;
+    transition: border-color .15s linear, left .1s linear; }
+input[type="checkbox"].toggle:checked + label:before {
+  background: #61BD7E; }
+input[type="checkbox"].toggle:checked + label:after {
+  border-color: #61BD7E;
+  left: 13px; }
+/* Barebones Compass form styles
+ *
+ * Form validation styles
+ */
+.has-success .form-control {
+  border-color: #14ccad; }
+.has-error .form-control {
+  border-color: #f27349; }
+.has-error .validation-msg {
+  color: #f27349;
+  margin: 5px 0 0; }
+/* Barebones Compass form styles
+ *
+ * Form button styles
+ */
+.btn {
+  letter-spacing: 1px;
+  text-align: center;
+  background-image: none;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #333;
+  transition: color 0.15s linear, background-color 0.15s linear; }
+.btn, .btn:visited {
+    color: #fff; }
+.btn:hover, .btn:focus {
+    color: #fff; }
+.btn:hover, .btn:focus {
+    background-color: #777; }
+.btn:active {
+    color: #fff;
+    background-color: #000; }
+.btn-primary {
+  background-color: #177ee6;
+  transition: color 0.15s linear, background-color 0.15s linear; }
+.btn-primary, .btn-primary:visited {
+    color: #fff; }
+.btn-primary:hover, .btn-primary:focus {
+    color: #fff; }
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #3d97f2; }
+.btn-primary:active {
+    color: #fff;
+    background-color: #246bb3; }
+.btn-block {
+  display: block;
+  width: 100%; }
+.btn-block + .btn-block {
+    margin-top: 10px; }
+.btn-transparent {
+  border: 1px solid #555;
+  background: transparent;
+  outline: 0;
+  text-decoration: none;
+  color: #555; }
+.btn-disabled {
+  background: #ccc;
+  outline: 0;
+  text-decoration: none; }
+.btn-disabled:hover, .btn-disabled:active {
+    background: #ccc; }
+.scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll; }
+/**
+ * selectize.scss (v0.8.7)
+ * Copyright (c) 2014 Emanuel Kluge
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ *
+ * @author Emanuel Kluge <mail@emanuel-kluge.de>
+ */
+.selectize-control {
+  position: relative; }
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
+  color: #303030;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 18px;
+  -webkit-font-smoothing: inherit; }
+.selectize-input,
+.selectize-control.single .selectize-input.input-active {
+  background: #fff;
+  cursor: text;
+  display: inline-block; }
+.selectize-input {
+  border: 1px solid #d0d0d0;
+  padding: 8px 8px;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px; }
+.selectize-control.multi .selectize-input.has-items {
+    padding: 6px 8px 3px; }
+.selectize-input.full {
+    background-color: #fff; }
+.selectize-input.disabled, .selectize-input.disabled * {
+    cursor: default !important; }
+.selectize-input.focus {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15); }
+.selectize-input.dropdown-active {
+    border-radius: 3px 3px 0 0; }
+.selectize-input > * {
+    vertical-align: baseline;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline; }
+.selectize-control.multi .selectize-input > div {
+    cursor: pointer;
+    margin: 0 3px 3px 0;
+    padding: 2px 6px;
+    background: #f2f2f2;
+    color: #303030;
+    border: 0 solid #d0d0d0; }
+.selectize-control.multi .selectize-input > div.active {
+      background: #e8e8e8;
+      color: #303030;
+      border: 0 solid #cacaca; }
+.selectize-control.multi .selectize-input.disabled > div, .selectize-control.multi .selectize-input.disabled > div.active {
+    color: #7d7d7d;
+    background: white;
+    border: 0 solid white; }
+.selectize-input > input {
+    display: inline-block !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    max-width: 100% !important;
+    margin: 0 2px 0 0 !important;
+    text-indent: 0 !important;
+    border: 0 none !important;
+    background: none !important;
+    line-height: inherit !important;
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+    box-shadow: none !important; }
+.selectize-input > input::-ms-clear {
+      display: none; }
+.selectize-input > input:focus {
+      outline: none !important; }
+.selectize-input:after {
+  content: ' ';
+  display: block;
+  clear: left; }
+.selectize-input.dropdown-active:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  background: #f0f0f0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+.selectize-dropdown {
+  position: absolute;
+  z-index: 10;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  margin: -1px 0 0 0;
+  border-top: 0 none;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 3px 3px; }
+.selectize-dropdown [data-selectable] {
+    cursor: pointer;
+    overflow: hidden; }
+.selectize-dropdown [data-selectable] .highlight {
+      background: rgba(125, 168, 208, 0.2);
+      border-radius: 1px; }
+.selectize-dropdown [data-selectable], .selectize-dropdown .optgroup-header {
+    padding: 5px 8px; }
+.selectize-dropdown .optgroup:first-child .optgroup-header {
+    border-top: 0 none; }
+.selectize-dropdown .optgroup-header {
+    color: #303030;
+    background: #fff;
+    cursor: default; }
+.selectize-dropdown .active {
+    background-color: #f5fafd;
+    color: #495c68; }
+.selectize-dropdown .active.create {
+      color: #495c68; }
+.selectize-dropdown .create {
+    color: rgba(48, 48, 48, 0.5); }
+.selectize-dropdown-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 200px; }
+.selectize-control.single .selectize-input, .selectize-control.single .selectize-input input {
+  cursor: pointer; }
+.selectize-control.single .selectize-input.input-active, .selectize-control.single .selectize-input.input-active input {
+  cursor: text; }
+.selectize-control.rtl.single .selectize-input:after {
+  left: 15px;
+  right: auto; }
+.selectize-control.rtl .selectize-input > input {
+  margin: 0 4px 0 -2px !important; }
+.selectize-control .selectize-input.disabled {
+  opacity: 0.5;
+  background-color: #fafafa; }
+/**
+ * selectize.scss (v0.8.7)
+ * Copyright (c) 2014 Emanuel Kluge
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ *
+ * @author Emanuel Kluge <mail@emanuel-kluge.de>
+ */
+.selectize-control {
+  position: relative; }
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
+  color: #303030;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 18px;
+  -webkit-font-smoothing: inherit; }
+.selectize-input,
+.selectize-control.single .selectize-input.input-active {
+  background: #fff;
+  cursor: text;
+  display: inline-block; }
+.selectize-input {
+  border: 1px solid #d0d0d0;
+  padding: 8px 8px;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px; }
+.selectize-control.multi .selectize-input.has-items {
+    padding: 6px 8px 3px; }
+.selectize-input.full {
+    background-color: #fff; }
+.selectize-input.disabled, .selectize-input.disabled * {
+    cursor: default !important; }
+.selectize-input.focus {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15); }
+.selectize-input.dropdown-active {
+    border-radius: 3px 3px 0 0; }
+.selectize-input > * {
+    vertical-align: baseline;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline; }
+.selectize-control.multi .selectize-input > div {
+    cursor: pointer;
+    margin: 0 3px 3px 0;
+    padding: 2px 6px;
+    background: #f2f2f2;
+    color: #303030;
+    border: 0 solid #d0d0d0; }
+.selectize-control.multi .selectize-input > div.active {
+      background: #e8e8e8;
+      color: #303030;
+      border: 0 solid #cacaca; }
+.selectize-control.multi .selectize-input.disabled > div, .selectize-control.multi .selectize-input.disabled > div.active {
+    color: #7d7d7d;
+    background: white;
+    border: 0 solid white; }
+.selectize-input > input {
+    display: inline-block !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    max-width: 100% !important;
+    margin: 0 2px 0 0 !important;
+    text-indent: 0 !important;
+    border: 0 none !important;
+    background: none !important;
+    line-height: inherit !important;
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+    box-shadow: none !important; }
+.selectize-input > input::-ms-clear {
+      display: none; }
+.selectize-input > input:focus {
+      outline: none !important; }
+.selectize-input:after {
+  content: ' ';
+  display: block;
+  clear: left; }
+.selectize-input.dropdown-active:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  background: #f0f0f0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+.selectize-dropdown {
+  position: absolute;
+  z-index: 10;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  margin: -1px 0 0 0;
+  border-top: 0 none;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 3px 3px; }
+.selectize-dropdown [data-selectable] {
+    cursor: pointer;
+    overflow: hidden; }
+.selectize-dropdown [data-selectable] .highlight {
+      background: rgba(125, 168, 208, 0.2);
+      border-radius: 1px; }
+.selectize-dropdown [data-selectable], .selectize-dropdown .optgroup-header {
+    padding: 5px 8px; }
+.selectize-dropdown .optgroup:first-child .optgroup-header {
+    border-top: 0 none; }
+.selectize-dropdown .optgroup-header {
+    color: #303030;
+    background: #fff;
+    cursor: default; }
+.selectize-dropdown .active {
+    background-color: #f5fafd;
+    color: #495c68; }
+.selectize-dropdown .active.create {
+      color: #495c68; }
+.selectize-dropdown .create {
+    color: rgba(48, 48, 48, 0.5); }
+.selectize-dropdown-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 200px; }
+.selectize-control.single .selectize-input, .selectize-control.single .selectize-input input {
+  cursor: pointer; }
+.selectize-control.single .selectize-input.input-active, .selectize-control.single .selectize-input.input-active input {
+  cursor: text; }
+.selectize-control.rtl.single .selectize-input:after {
+  left: 15px;
+  right: auto; }
+.selectize-control.rtl .selectize-input > input {
+  margin: 0 4px 0 -2px !important; }
+.selectize-control .selectize-input.disabled {
+  opacity: 0.5;
+  background-color: #fafafa; }
+.selectize-control.multi .selectize-input.has-items {
+  padding-left: 5px;
+  padding-right: 5px; }
+.selectize-control.multi .selectize-input.disabled [data-value] {
+  color: #999;
+  text-shadow: none;
+  background: none;
+  box-shadow: none; }
+.selectize-control.multi .selectize-input.disabled [data-value],
+  .selectize-control.multi .selectize-input.disabled [data-value] .remove {
+    border-color: #e6e6e6; }
+.selectize-control.multi .selectize-input.disabled [data-value] .remove {
+    background: none; }
+.selectize-control.multi .selectize-input [data-value] {
+  text-shadow: 0 1px 0 rgba(0, 51, 83, 0.3);
+  border-radius: 3px;
+  background-color: #1b9dec;
+  background-image: linear-gradient(to bottom, #1da7ee, #178ee9);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1da7ee', endColorstr='#178ee9', GradientType=0);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px rgba(255, 255, 255, 0.03); }
+.selectize-control.multi .selectize-input [data-value].active {
+    background-color: #0085d4;
+    background-image: linear-gradient(to bottom, #008fd8, #0075cf);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008fd8', endColorstr='#0075cf', GradientType=0); }
+.selectize-control.single .selectize-input {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  background-color: #f9f9f9;
+  background-image: linear-gradient(to bottom, #fefefe, #f2f2f2);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#f2f2f2', GradientType=0); }
+.selectize-control.single .selectize-input,
+.selectize-dropdown.single {
+  border-color: #b8b8b8; }
+.selectize-dropdown .optgroup-header {
+  padding-top: 7px;
+  font-weight: bold;
+  font-size: .85em; }
+.selectize-dropdown .optgroup {
+  border-top: 1px solid #f0f0f0; }
+.selectize-dropdown .optgroup:first-child {
+    border-top: 0 none; }
+/* Barebones Compass block styles
+ */
+.layout-container {
+  width: 940px;
+  margin: 0 auto; }
+.layout-container-fluid {
+  margin: 0 auto; }
+/* Barebones Compass layout styles
+ *
+ * Grid styles
+ */
+.row {
+  margin: 0 -10px; }
+.layout-container-fluid > .row {
+    margin: 0; }
+.row > .col-1, .row > .col-2, .row > .col-3, .row > .col-4, .row > .col-5, .row > .col-6, .row > .col-7, .row > .col-8, .row > .col-9, .row > .col-10, .row > .col-11, .row > .col-12 {
+    min-height: 1px;
+    padding: 0 10px;
+    float: left;
+    position: relative; }
+.row > .col-1 {
+    width: 80px; }
+.layout-container-fluid > .row > .col-1 {
+      width: 8.33333%; }
+.row > .col-2 {
+    width: 160px; }
+.layout-container-fluid > .row > .col-2 {
+      width: 16.66667%; }
+.row > .col-3 {
+    width: 240px; }
+.layout-container-fluid > .row > .col-3 {
+      width: 25%; }
+.row > .col-4 {
+    width: 320px; }
+.layout-container-fluid > .row > .col-4 {
+      width: 33.33333%; }
+.row > .col-5 {
+    width: 400px; }
+.layout-container-fluid > .row > .col-5 {
+      width: 41.66667%; }
+.row > .col-6 {
+    width: 480px; }
+.layout-container-fluid > .row > .col-6 {
+      width: 50%; }
+.row > .col-7 {
+    width: 560px; }
+.layout-container-fluid > .row > .col-7 {
+      width: 58.33333%; }
+.row > .col-8 {
+    width: 640px; }
+.layout-container-fluid > .row > .col-8 {
+      width: 66.66667%; }
+.row > .col-9 {
+    width: 720px; }
+.layout-container-fluid > .row > .col-9 {
+      width: 75%; }
+.row > .col-10 {
+    width: 800px; }
+.layout-container-fluid > .row > .col-10 {
+      width: 83.33333%; }
+.row > .col-11 {
+    width: 880px; }
+.layout-container-fluid > .row > .col-11 {
+      width: 91.66667%; }
+.row > .col-12 {
+    width: 960px; }
+.layout-container-fluid > .row > .col-12 {
+      width: 100%; }
+
+
+.layout-header {
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
+@font-face {
+  font-family: 'Arimo-bold';
+  src: url("../fonts/arimo-bold-webfont.eot") format("embedded-opentype"), url("../fonts/arimo-bold-webfont.woff") format("woff"), url("../fonts/arimo-bold-webfont.ttf") format("truetype"), url("../fonts/arimo-bold-webfont.svg") format("svg");
+  font-weight: 900; }
+@font-face {
+  font-family: 'Arimo-regular';
+  src: url("../fonts/arimo-regular-webfont.eot") format("embedded-opentype"), url("../fonts/arimo-regular-webfont.woff") format("woff"), url("../fonts/arimo-regular-webfont.ttf") format("truetype"), url("../fonts/arimo-regular-webfont.svg") format("svg");
+  font-weight: 500; }
+html {
+  font-family: "Arimo-bold", Arial, sans-serif;
+  font-style: normal; }
+.layout-header {
+  position: relative;
+  margin: 0 auto 0 auto;
+  padding: 25px 10px;
+  height: 80px;
+  background-color: #424546;
+  text-align: right;
+  min-height: 41px;
+  z-index: 10; }
+.layout-header .menu {
+    display: block;
+    width: 70%;
+    height: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+    text-align: center; }
+.layout-header .menu ul {
+      list-style: none;
+      list-style-image: none;
+      margin: 0;
+      padding: 0; }
+.layout-header .menu ul li {
+        display: inline-block;
+        margin: 5px 30px;
+        opacity: 1;
+        transition: opacity 0.125s ease-out; }
+.layout-header .menu ul li a {
+          color: #fff;
+          font-family: "Arimo-regular", Arial, sans-serif; }
+.layout-header .small-logo {
+    position: relative;
+    float: left;
+    text-decoration: none;
+    background-image: url("../images/mini-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 30px;
+    background-position: 0; }
+.layout-header .social {
+    position: relative;
+    display: block;
+    float: right;
+    bottom: 15px;
+    margin: 0;
+    list-style: none; }
+.layout-header .social li {
+      display: inline-block;
+      float: left;
+      margin: 0 5px; }
+.layout-header .social .lang {
+      font-size: 12px;
+      margin-top: 8px; }
+.layout-header .social a {
+      color: #fff; }
+h1 {
+  font-size: 70px;
+  line-height: 80px;
+  color: #4b5053;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+h2 {
+  font-size: 50px;
+  line-height: 60px;
+  color: #4b5053;
+  text-align: left;
+  margin-top: 60px;
+  margin-bottom: 20px; }
+h3 {
+  font-size: 20px;
+  line-height: 25px;
+  color: #4b5053;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+h4 {
+  font-size: 16px;
+  line-height: 16px;
+  color: #4b5053;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+p {
+  font-family: "Arimo-regular", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  color: #4b5053;
+  text-align: left;
+  margin: 20px 0; }
+a {
+  font-family: "Arimo-regular", Arial, sans-serif;
+  font-style: normal;
+  color: #4b5053;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity .3s linear; }
+.facebook {
+  display: inline-block;
+  background-image: url("../images/fb-1.png");
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  background-position: 0; }
+.instagram {
+  display: inline-block;
+  background-image: url("../images/inst-1.png");
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  background-position: 0; }
+.pinterest {
+  display: inline-block;
+  background-image: url("../images/pin-1.png");
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  background-position: 0; }
+.carousel-inner {
+  height: 60vh; }
+/* Barebones Compass layout styles
+ *
+ * Aside styles
+ */
+.layout-aside {
+  display: inline-block;
+  width: 300px;
+  float: left;
+  margin-right: 10px; }
+/* Barebones Compass layout styles
+ *
+ * Content styles
+ */
+.layout-content {
+  padding-top: 20px; }
+.layout-aside + .layout-content {
+  margin-left: 310px; }
+/* Barebones Compass layout styles
+ *
+ * Footer styles
+ */
+.layout-footer {
+  background-color: #f0f2f5;
+  height: 100px; }
+html,
+body {
+  height: 100%; }
+.layout-content {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -100px; }
+.layout-content:after {
+  content: "";
+  display: block;
+  height: 100px; }
+.layout-footer {
+  clear: both;
+  position: relative;
+  background-color: #424546; }
+
+.slick-slide {
+    position: relative;
+}
+.slick-slide .img-container {
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main .slick-slide .img-container.item-1 {
+    background-image: url("../images/main-img1.jpg");
+}
+.main .slick-slide .img-container.item-2 {
+    background-image: url("../images/main-img2.jpg");
+}
+.main .slick-slide .img-container.item-3 {
+    background-image: url("../images/main-img5.jpg");
+}
+.main .slick-slide .img-container.item-4 {
+    background-image: url("../images/main-img4.jpg");
+}
+.main .slick-slide .img-container.item-5 {
+    background-image: url("../images/main-img7.jpg");
+}
+
+.projects .slick-slide .img-container.item-1 {
+    background-image: url("../images/img1.jpg");
+}
+.projects .slick-slide .img-container.item-2 {
+    background-image: url("../images/img2.jpg");
+}
+.projects .slick-slide .img-container.item-3 {
+    background-image: url("../images/img5.jpg");
+}
+.projects .slick-slide .img-container.item-4 {
+    background-image: url("../images/img4.jpg");
+}
+.projects .slick-slide .img-container.item-5 {
+    background-image: url("../images/img7.jpg");
+}
+
+.slick-slide .slider-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slick-slide .slider-content h1 {
+    color: #fff;
+    text-align: center;
+}
+.slick-slider .slick-list {
+    width: 100%;
+}
+.slick-dots li button::before {
+    font-size: 26px;
+    color: #424546;
+}
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
+.slick-dots {
+    bottom: 15px;
+}
+
+.head-arrow-wrapper {
+    display: block;
+    margin: 10px auto 0;
+    width: 20px;
+    height: 20px;
+}
+
+.head-arrow-down {
+    width: 20px;
+    height: 20px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-right: 1px solid #424546;
+    border-bottom: 1px solid #424546;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+div.mainTopSlider, div.mainTopSlider div.topSliderBG,
+div.careersTopSlider, div.careersTopSlider div.topSliderBG,
+div.schoolTopSlider, div.schoolTopSlider div.topSliderBG,
+div.vacanciesTopSlider, div.vacanciesTopSlider div.topSliderBG {
+    height: 400px
+}
+
+div.mainTopSlider, div.careersTopSlider, div.schoolTopSlider, div.vacanciesTopSlider {
+    width: 100%;
+    position: relative;
+    overflow: hidden
+}
+
+div.mainTopSlider div, div.careersTopSlider div, div.schoolTopSlider div, div.vacanciesTopSlider div {
+    position: relative;
+    z-index: 2
+}
+
+div.mainTopSlider div.topSliderBG, div.careersTopSlider div.topSliderBG, div.schoolTopSlider div.topSliderBG, div.vacanciesTopSlider div.topSliderBG {
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%
+}
+
+div.mainTopSlider div.bigText, div.mainTopSlider div.smallText, div.mainTopSlider div.sliderLine {
+    position: absolute
+}
+
+
+div.mainTopSlider div.topSliderBG img {
+    width: 100%;
+    opacity: 0;
+    transition: transform 6s ease-in-out, opacity 2s ease-in-out;
+    -webkit-transition: -webkit-transform 6s ease-in-out, opacity 2s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: auto;
+}
+
+div.mainTopSlider div.topSliderBG img.first {
+    opacity: 1
+}
+
+div.mainTopSlider div.bigText, div.careersTopSlider div.bigText, div.schoolTopSlider div.bigText, div.vacanciesTopSlider div.bigText {
+    font-family: 'Arimo-bold';
+    color: #fff;
+    width: 100%;
+    margin: auto;
+    opacity: 0
+}
+
+div.mainTopSlider div.bigText {
+    font-size: 62px
+}
+
+div.mainTopSlider div.bigText, div.vacanciesTopSlider div.bigText, div.schoolTopSlider div.bigText {
+    text-align: center
+}
+
+div.mainTopSlider div.sliderLine {
+    top: 240px;
+    width: 0;
+    border-top: 1px solid #fff
+}
+
+div.mainTopSlider div.sliderLine {
+    margin-left: calc(50% - 110px)
+}
+
+div.mainTopSlider div.smallText, div.careersTopSlider div.smallText, div.schoolTopSlider div.smallText {
+    font-family: 'Arimo-regular';
+    color: #fff;
+    width: 100%;
+    opacity: 0
+}
+
+div.mainTopSlider div.smallText {
+    top: 285px;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 100%;
+    text-align: center
+}
+
+div.mainTopSlider div.sliderPoints {
+    width: 132px;
+    margin-left: calc(50% - 66px);
+    position: absolute;
+    bottom: 50px
+}
+
+div.mainTopSlider div.sliderPoints div.point {
+    float: left;
+    background: url(../images/slider-point.png) no-repeat;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px
+}
+
+div.mainTopSlider div.sliderPoints div.point.active {
+    background: url(../images/slider-point-active.png) no-repeat
+}
+
+div.mainTopSlider div.sliderPoints div.point:hover, div.mainTopSlider div.sliderPoints div.point.active:hover {
+    background: url(../images/slider-point-hover.png) no-repeat;
+    cursor: pointer
+}
+
+@keyframes sliderButtonAnimationOn {
+    from {
+        border: 1px solid #f4803d;
+        background: #f4803d
+    }
+    to {
+        border: 1px solid #fff;
+        background: none
+    }
+}
+
+@keyframes sliderButtonAnimationOff {
+    from {
+        border: 1px solid #fff;
+        background: none
+    }
+    to {
+        border: 1px solid #f4803d;
+        background: #f4803d
+    }
+}
+
+div.mainTopSlider div.sliderButton, div.careersTopSlider div.sliderButton, div.schoolTopSlider div.sliderButton  {
+    width: 100%;
+    opacity: 0;
+    top: 430px
+}
+
+div.mainTopSlider div.sliderButton {
+    text-align: center
+}
+
+div.mainTopSlider div.sliderButton a,
+div.careersTopSlider div.sliderButton a,
+div.schoolTopSlider div.sliderButton a,
+div.schoolMoreTopSlider div.sliderButton a {
+    font-family: 'Arimo-regular';
+    font-size: 14px;
+    color: #fff;
+    padding: 15px 50px;
+    margin: auto;
+    text-align: center;
+    border-radius: 3px;
+    text-decoration: none;
+    transition-delay: .3s;
+    transition: all .6s ease;
+    border: 1px solid #f4803d;
+    background: #f4803d
+}
+
+div.mainTopSlider div.sliderButton a:hover, div.careersTopSlider div.sliderButton a:hover, div.schoolTopSlider div.sliderButton a:hover {
+    border: 1px solid #fff;
+    background: none
+}
+
+@media screen and (min-width: 1160px) {
+
+    div.mainTopSlider, div.mainTopSlider div.topSliderBG,
+    div.careersTopSlider, div.careersTopSlider div.topSliderBG,
+    div.schoolTopSlider, div.schoolTopSlider div.topSliderBG,
+    div.vacanciesTopSlider, div.vacanciesTopSlider div.topSliderBG {
+        height: 580px
+    }
+}
