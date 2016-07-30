@@ -1663,13 +1663,15 @@ div.mainTopSlider, div.mainTopSlider div.topSliderBG,
 div.careersTopSlider, div.careersTopSlider div.topSliderBG,
 div.schoolTopSlider, div.schoolTopSlider div.topSliderBG,
 div.vacanciesTopSlider, div.vacanciesTopSlider div.topSliderBG {
-    height: 400px
+    height: 480px;
 }
 
 div.mainTopSlider, div.careersTopSlider, div.schoolTopSlider, div.vacanciesTopSlider {
     width: 100%;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 2s ease;
 }
 
 div.mainTopSlider div, div.careersTopSlider div, div.schoolTopSlider div, div.vacanciesTopSlider div {
@@ -1824,7 +1826,7 @@ div.mainTopSlider div.sliderButton a:hover, div.careersTopSlider div.sliderButto
     background: none
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1440px) {
 
     div.mainTopSlider, div.mainTopSlider div.topSliderBG,
     div.careersTopSlider, div.careersTopSlider div.topSliderBG,
@@ -1832,4 +1834,18 @@ div.mainTopSlider div.sliderButton a:hover, div.careersTopSlider div.sliderButto
     div.vacanciesTopSlider, div.vacanciesTopSlider div.topSliderBG {
         height: 580px
     }
+}
+
+.slick-prev, .slick-next {
+  display: none !important;
+}
+
+.mainlogo-block {
+    position: absolute;
+    background-image: url("../images/logo.png");
+    background-size: cover;
+    height: 270px;
+    width: 800px;
+    margin: 100px 20%;
+    z-index: 10;
 }

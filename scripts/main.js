@@ -41,6 +41,7 @@ $(document).on('ready', function() {
 var $body = $(document.body);
 
 $(document).on('click', '.head-arrow-down', function (e) {
+
     e.preventDefault();
         var $this = $(this),
             $parent = $this.parent(),
@@ -57,7 +58,32 @@ $(document).on('click', '.head-arrow-down', function (e) {
         $body.animate({scrollTop: pos});
 });
 
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+$(document).on('ready', function(){
+    setTimeout(function () {
+        $('.mainlogo-block').css("opacity", "0");
+    }, 2000)
+    setTimeout(function () {
+        $('.mainTopSlider').css("opacity", "1");
+    }, 1000)
+});
+
 var visibleAboutUs = 0, visibleProjectsTitle = 0, visibleOfficesTitle = 0, visibleOffices = 0, visibleStatistics = 0, goes = new Array();
+setTimeout(function () {
 $(function () {
     $(window).scrollTop($(window).scrollTop() + 1);
     $(window).scrollTop($(window).scrollTop() - 1);
@@ -162,3 +188,4 @@ function moveText(bigTextDiv, bigText, smallTextDiv, smallText) {
         sliderButton.animate({"opacity": 1}, 600)
     })
 }
+}, 2000);
