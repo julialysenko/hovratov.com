@@ -1663,23 +1663,16 @@ div.mainTopSlider, div.mainTopSlider div.topSliderBG,
 div.careersTopSlider, div.careersTopSlider div.topSliderBG,
 div.schoolTopSlider, div.schoolTopSlider div.topSliderBG,
 div.vacanciesTopSlider, div.vacanciesTopSlider div.topSliderBG {
-<<<<<<< HEAD
-    height: 400px
-=======
-    height: 480px;
->>>>>>> e2d0813c338e1d8d20960ce71ceaa635695c27e8
+    height: 480px
 }
 
 div.mainTopSlider, div.careersTopSlider, div.schoolTopSlider, div.vacanciesTopSlider {
     width: 100%;
     position: relative;
-<<<<<<< HEAD
-    overflow: hidden
-=======
     overflow: hidden;
     opacity: 0;
     transition: opacity 2s ease;
->>>>>>> e2d0813c338e1d8d20960ce71ceaa635695c27e8
+
 }
 
 div.mainTopSlider div, div.careersTopSlider div, div.schoolTopSlider div, div.vacanciesTopSlider div {
@@ -1834,11 +1827,7 @@ div.mainTopSlider div.sliderButton a:hover, div.careersTopSlider div.sliderButto
     background: none
 }
 
-<<<<<<< HEAD
-@media screen and (min-width: 1160px) {
-=======
 @media screen and (min-width: 1440px) {
->>>>>>> e2d0813c338e1d8d20960ce71ceaa635695c27e8
 
     div.mainTopSlider, div.mainTopSlider div.topSliderBG,
     div.careersTopSlider, div.careersTopSlider div.topSliderBG,
@@ -1846,8 +1835,6 @@ div.mainTopSlider div.sliderButton a:hover, div.careersTopSlider div.sliderButto
     div.vacanciesTopSlider, div.vacanciesTopSlider div.topSliderBG {
         height: 580px
     }
-<<<<<<< HEAD
-=======
 }
 
 .slick-prev, .slick-next {
@@ -1862,5 +1849,4 @@ div.mainTopSlider div.sliderButton a:hover, div.careersTopSlider div.sliderButto
     width: 800px;
     margin: 100px 20%;
     z-index: 10;
->>>>>>> e2d0813c338e1d8d20960ce71ceaa635695c27e8
 }
