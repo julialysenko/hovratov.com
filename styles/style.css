@@ -1557,7 +1557,7 @@ a {
  */
 .layout-footer {
   background-color: #f0f2f5;
-  height: 100px; }
+  height: auto; }
 html,
 body {
   height: 100%; }
@@ -1574,8 +1574,12 @@ body {
 .layout-footer {
   clear: both;
   position: relative;
+  margin-top: 60px;
   background-color: #424546; }
-
+.layout-footer h2,
+.layout-footer p {
+  color: #fff;
+}
 .slick-slide {
     position: relative;
 }
