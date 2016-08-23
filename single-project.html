@@ -1,162 +1,164 @@
 <!doctype html>
-<html lang="ru">
+<html class="no-js">
     <head>
         <meta charset="utf-8">
-        <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Vsevolod Hovratov</title>
+        <meta name="description" content="Vsevolod Hovratov HTML project">
+        <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- Favicon block -->
+        <link rel="shortcut icon" href="favicon/favicon.ico">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- / Favicon block -->
+
         <link rel="stylesheet" type="text/css" href="styles/normalize.css">
-        <link rel="stylesheet" type="text/css" href="styles/grid.css">
         <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="styles/slick-theme.css">
+        <link rel="stylesheet" type="text/css" href="styles/slick.css">
         <link rel="stylesheet" type="text/css" href="styles/style.css">
+
     </head>
     <body>
-        <div class="header">
-            <div class="nav">
+        <div class="layout-header">
+            <a class="small-logo" href="#"></a>
+            <div class="menu">
                 <ul>
-                <li class="small-logo">
-                    <a href="#">
-                        <span></span>
-                    </a>
-                </li>
-                <li class="lang">
-                    <a href="#">
-                        <span>RU</span>
-                    </a>
-                </li>
-                <li class="social">
-                    <a href="#">
-                        <span class="facebook"></span>
-                    </a>
-                </li>
-                <li class="social">
-                    <a href="#">
-                        <span class="instagram"></span>
-                    </a>
-                </li>
-                <li class="social">
-                    <a href="#">
-                        <span class="pinterest"></span>
-                    </a>
-                </li>
+                    <li>
+                        <a href="./index.html">
+
+                            О нас
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./projects.html">
+                            Проекты
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./index.html">
+                            Партнеры
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contacts">
+                            Контакты
+                        </a>
+                    </li>
                 </ul>
-          </div>
-          <div class="menu">
-              <ul>
-              <li class="projects">
-                <a href="#">
-                    <h4 class="active">Проекты</h4>
-                    <ul class="projects-list">
-                        <li>Коттеджи</li>
-                        <li>Фахверковые дома</li>
-                        <li>Инженерные сооружения</li>
-                        <li>Малые формы</li>
-                        <li>Интерьеры</li>
-                        <li>Ландшафтное проектирование</li>
-                    </ul>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                    <h4>Партнеры</h4>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                    <h4>О нас</h4>
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank">
-                    <h4>Контакты</h4>
-                </a>
-              </li>
-            </ul>
-          </div>
+            </div>
+                <ul class="social">
+                   <!--<li class="lang">
+                        <a href="#">RU</a>
+                    </li>-->
+                    <li>
+                        <a href="#">
+                            <span class="facebook"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="instagram"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="pinterest"></span>
+                        </a>
+                    </li>
+                </ul>
         </div>
-        <div class="container">
-            <div class="col-8 project-title">
-                <h2>Загородный дом</h2>
-            </div>
-            <div class="project-content">
-              <div class="col-9">
-                <div id="carousel-project" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-project" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-project" data-slide-to="1"></li>
-                        <li data-target="#carousel-project" data-slide-to="2"></li>
-                    </ol>
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                           <img src="./images/img1.jpg" width="710px" height="340px" alt="img1">
-                            <div class="carousel-caption">
+
+        <div class="layout-content">
+            <div class="layout-container">
+                <h2>Фахверковый дом</h2>
+                <div class="row">
+                    <div class="col-12">
+                        <div id="carousel-project" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="./images/img1.jpg" alt="house1" height="480" width="960">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/img2.jpg" alt="house1" height="480" width="960">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/img4.jpg" alt="house1" height="480" width="960">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/img7.jpg" alt="house1" height="480" width="960">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/img5.jpg" alt="house1" height="480" width="960">
+                                </div>
                             </div>
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-project" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-project" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only"></span>
+                            </a>
                         </div>
-                        <div class="item">
-                          <img src="./images/img2.jpg" width="710px" height="340px" alt="img2">
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                        <div class="item">
-                          <img src="./images/img4.jpg" width="710px" height="340px" alt="img4">
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-project" role="button" data-slide="prev">
-                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                      <span class="sr-only"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-project" role="button" data-slide="next">
-                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                      <span class="sr-only"></span>
-                    </a>
+                        <p>Место строительства:</p>
+                        <p>Подрядчик:</p>
+                        <p>Общая площадь дома:</p>
+                        <p>Бассейн:</p>
+                        <p>Ландшафтный дизайн:</p>
+                    </div>   
                 </div>
-            </div>
-            <div class="col-7 text-contacts">
-              <p>Мы готовы сделать уникальный проект по вашим пожеланиям и возможностям, полностью соответствующий потребностям всех членов семьи и характеристикам земельного участка.</p>
-              <h4>Площадь</h4>
-              <p>200m</p>
-              <h4>Земельный участок</h4>
-              <p>1200m</p>
-              <h4>Конструкция</h4>
-              <p>Фахверковый</p>
-            </div>
-            </div>
-        
-            </div>
-            </div>
-            <div class="footer">
-                <div class="inner">
-                    <p class="copyright-terms">
-                        Vsevolod Hovratov   2015
-                    </p>
-                    <div class="nav">
-                        <ul>
-                            <li class="social">
-                                <a href="#">
-                                    <span class="facebook"></span>
-                                </a>
-                            </li>
-                            <li class="social">
-                                <a href="#">
-                                    <span class="instagram"></span>
-                                </a>
-                            </li>
-                            <li class="social">
-                                <a href="#">
-                                    <span class="pinterest"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+
             </div>
         </div>
+
+        <div class="layout-footer">
+            <div class="layout-container">
+                <div class="row">
+                    <div class="col-6">
+                        <h2 id="contacts">Контакты</h2>
+                        <div class="contacts-block">
+                            <span class="phone"></span><p>+380 44 225 29 16</p>
+                            <span class="mail"></span><p>hovratov@gmail.com</p>
+                            <span class="location"></span><p>Киев, ул. Оросительная, 5</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <form>
+                            <input placeholder="Телефон или e-mail">
+                            <textarea placeholder="Опишите ваш проект"></textarea>
+                        </form>
+                    </div>
+                </div>
+                <span class="copyrite">Vsevolod Hovratov 2016</span>
+            </div>
+        </div>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
         <script src="scripts/jquery-1.11.3.min.js"></script>
         <script src="scripts/bootstrap.js"></script>
-        <script src="scripts/main.js"></script>
+        <!--<script src="scripts/main.js"></script>-->
+
     </body>
 </html>
