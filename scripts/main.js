@@ -34,17 +34,8 @@ $(function() {
   });
 });
 
-$(document).on('ready', function(){
-    setTimeout(function () {
-        $('.mainlogo-block').css("opacity", "0");
-    }, 2000)
-    setTimeout(function () {
-        $('.mainTopSlider').css("opacity", "1");
-    }, 1000)
-});
-
 var visibleAboutUs = 0, visibleProjectsTitle = 0, visibleOfficesTitle = 0, visibleOffices = 0, visibleStatistics = 0, goes = new Array();
-setTimeout(function () {
+
 $(function () {
     $(window).scrollTop($(window).scrollTop() + 1);
     $(window).scrollTop($(window).scrollTop() - 1);
@@ -149,4 +140,36 @@ function moveText(bigTextDiv, bigText, smallTextDiv, smallText) {
         sliderButton.animate({"opacity": 1}, 600)
     })
 }
-}, 2000);
+
+
+// textarea
+window.autosize && autosize(document.querySelectorAll('textarea'));
+
+
+//slider 
+$('#gallery-1').royalSlider({
+    fullscreen: {
+        enabled: true,
+        nativeFS: true
+    },
+    controlNavigation: 'thumbnails',
+    autoScaleSlider: true,
+    autoScaleSliderWidth: 800,
+    autoScaleSliderHeight: 533,
+    loop: false,
+    imageScaleMode: 'fit-if-smaller',
+    navigateByClick: true,
+    numImagesToPreload: 2,
+    arrowsNav: true,
+    arrowsNavAutoHide: true,
+    arrowsNavHideOnTouch: true,
+    keyboardNavEnabled: true,
+    fadeinLoadedSlide: true,
+    globalCaption: true,
+    globalCaptionInside: false,
+    thumbs: {
+        appendSpan: true,
+        firstMargin: true,
+        paddingBottom: 4
+    }
+});
