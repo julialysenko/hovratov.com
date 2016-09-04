@@ -1574,21 +1574,44 @@ a {
   height: 30px;
   margin-right: 40px;
   background-position: 0; }
+.house {
+  display: inline-block;
+  background-image: url("../images/house.svg");
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
+  margin: 0 50px;
+  background-position: 0;
+}
 .details {
   display: inline-block;
   background-image: url("../images/details.svg");
   background-repeat: no-repeat;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
+  margin: 0 50px;
   background-position: 0;
 }
 .build {
   display: inline-block;
   background-image: url("../images/build.svg");
   background-repeat: no-repeat;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
+  margin: 0 50px;
   background-position: 0;
+}
+.innovations {
+  display: inline-block;
+  background-image: url("../images/innovations.svg");
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
+  margin: 0 50px;
+  background-position: 0;
+}
+.text-center {
+  text-align: center;
 }
 .contacts-block {
   position: relative;
