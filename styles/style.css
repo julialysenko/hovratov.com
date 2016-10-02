@@ -628,11 +628,12 @@ hr {
 a {
   text-decoration: underline;
   color: #177ee6;
-  transition: color 0.15s linear; }
+  opacity: 1;
+  transition: opacity 0.15s linear; }
 a:visited {
     color: #5777d9; }
 a:hover, a:focus {
-    color: #14ccad; }
+    opacity: 0.7; }
 a:active {
     color: #3d5266; }
 /* Segmented link
@@ -1467,9 +1468,9 @@ html {
 .layout-header .social .lang {
       font-size: 12px; }
 .layout-header .social .lang a {
-      position: absolute;
-    left: -5px;
-    top: 7px; }
+    position: absolute;
+    left: -55px;
+    top: -4px;}
 .layout-header .social a {
       color: #fff; }
 h1 {
@@ -1567,12 +1568,14 @@ a {
   margin-right: 10px;
   background-position: 0; }
 .globe {
+  position: relative;
   display: inline-block;
-  background-image: url("../images/globe.svg");
+  top: 6px;
+  right: -5px;
+  background-image: url(../images/globe.svg);
   background-repeat: no-repeat;
-  width: 30px;
-  height: 30px;
-  margin-right: 40px;
+  width: 26px;
+  height: 26px;
   background-position: 0; }
 .house {
   display: inline-block;
@@ -1854,8 +1857,8 @@ div.mainTopSlider div.smallText {
 }
 
 div.mainTopSlider div.sliderPoints {
-    width: 132px;
-    margin-left: calc(50% - 66px);
+    width: 110px;
+    margin-left: calc(50% - 55px);
     position: absolute;
     bottom: 50px
 }
@@ -1990,13 +1993,10 @@ div.mainTopSlider div.sliderButton a:hover, div.careersTopSlider div.sliderButto
     display: inline-block;
     width: 450px;
     height: 60px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    margin: 10px 20px 25px 0;
     padding: 15px 20px;
     border: 1px none #000;
     background-color: rgba(46, 51, 56, 0.7);
-    -webkit-transition: opacity 200ms ease-in;
     transition: opacity 200ms ease-in;
     color: #fff;
     font-size: 18px;
@@ -2281,7 +2281,7 @@ img.rsImg {
 .rsDefault .rsSlide,
 .rsDefault .rsVideoFrameHolder,
 .rsDefault .rsThumbs {
-	background: #f3efef;
+	background: #FFF;
 	color: #FFF;
 }
 
@@ -2312,8 +2312,8 @@ img.rsImg {
 .rsDefault.rsHor .rsArrowRight { right: 0; top:0; }
 
 .rsDefault .rsArrowIcn {		
-	width: 32px;
-	height: 32px;
+	width: 40px;
+	height: 40px;
 	top: 50%;
 	left: 50%;
 	margin-top:-16px;	
@@ -2321,23 +2321,14 @@ img.rsImg {
 
 	position: absolute;	
 	cursor: pointer;	
-	background: url('../images/rs-defau.png');
-
-	background-color: #000;
-	background-color: rgba(0,0,0,0.75);
-	*background-color: #000;
-	
-	border-radius: 2px;
+  background-repeat: no-repeat;
+  background-position: 0;
 }
+.rsDefault .rsArrowLeft .rsArrowIcn { background-image: url('../images/prev.svg'); }
+.rsDefault .rsArrowRight .rsArrowIcn { background-image: url('../images/next.svg'); }
 .rsDefault .rsArrowIcn:hover {
-	background-color: rgba(0,0,0,0.9);
+	opacity: 1;
 }
-
-.rsDefault.rsHor .rsArrowLeft .rsArrowIcn { background-position: -64px -32px; }
-.rsDefault.rsHor .rsArrowRight .rsArrowIcn { background-position: -64px -64px; }
-
-.rsDefault.rsVer .rsArrowLeft .rsArrowIcn { background-position: -96px -32px; }
-.rsDefault.rsVer .rsArrowRight .rsArrowIcn { background-position: -96px -64px; }
 
 .rsDefault .rsArrowDisabled .rsArrowIcn { opacity: .2; filter: alpha(opacity=20);  *display: none; }
 
@@ -2424,7 +2415,7 @@ img.rsImg {
 	height: 100%;
 }
 .rsDefault .rsThumb.rsNavSelected {
-	background: #02874a;
+	background: #1a1b1b;
 }
 .rsDefault .rsThumb.rsNavSelected img {
 	opacity: 0.3;
@@ -2459,12 +2450,10 @@ img.rsImg {
 	position: absolute;
 	display: block;
 	cursor: pointer;	
-	z-index: 21;	
-	background: #000;
-	background: rgba(0,0,0,0.75);
+	z-index: 21;
 }
 .rsDefault .rsThumbsArrow:hover {
-	background: rgba(0,0,0,0.9);
+	background: rgba(0,0,0,0.5);
 }
 .rsDefault.rsWithThumbsVer .rsThumbsArrow {
 	width: 100%;
@@ -2604,21 +2593,16 @@ img.rsImg {
 .rsDefault .rsFullscreenIcn {
 	display: block;
 	margin: 6px;
-	width: 32px;
-	height: 32px;
-
-	background: url('../images/rs-defau.png') 0 0;
-	background-color: #000;
-	background-color: rgba(0,0,0,0.75);
-	*background-color: #000;
-	border-radius: 2px;
+	width: 40px;
+	height: 40px;
+	background: url('../images/scale-plus.svg') 0 0;
 
 }
 .rsDefault .rsFullscreenIcn:hover {
-	background-color: rgba(0,0,0,0.9);
+	opacity: 0.9;
 }
 .rsDefault.rsFullscreen .rsFullscreenIcn {
-	background-position: -32px 0;
+	background: url('../images/scale-minuse.svg') 0 0;
 }
 
 
@@ -2742,4 +2726,73 @@ img.rsImg {
   -webkit-user-select: none;
   -moz-user-select: none;  
   user-select: none;
+}
+
+a.project-pic {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+a.project-pic:hover {
+  opacity: 1;
+}
+
+.project-pic img {
+    transition: all 1.5s linear;
+    transform: scale3d(1, 1, 1);
+}
+
+.project-pic img:hover {
+    transform: scale3d(1.2, 1.2, 1);
+}
+
+.intro {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.intro-logo {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/main-logo.svg);
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 240px;
+  background-position: 0;
+  z-index: 101;
+}
+
+.scrollup {
+    position: fixed;
+    bottom: 80px;
+    right: 60px;
+    min-width: 40px;
+    z-index: 100;
+}
+.up {
+    display: none;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 64px;
+    top: 12px;
+    transform: rotate(45deg);
+    border-left: 2px solid #424546;
+    border-top: 2px solid #424546;
+    background: transparent;
+    cursor: pointer;
+}
+
+.main-layout {
+  display: none;
 }

@@ -145,31 +145,27 @@ function moveText(bigTextDiv, bigText, smallTextDiv, smallText) {
 // textarea
 window.autosize && autosize(document.querySelectorAll('textarea'));
 
-
-//slider 
-$('#gallery-1').royalSlider({
-    fullscreen: {
-        enabled: true,
-        nativeFS: true
-    },
-    controlNavigation: 'thumbnails',
-    autoScaleSlider: true,
-    autoScaleSliderWidth: 800,
-    autoScaleSliderHeight: 533,
-    loop: false,
-    imageScaleMode: 'fit-if-smaller',
-    navigateByClick: true,
-    numImagesToPreload: 2,
-    arrowsNav: true,
-    arrowsNavAutoHide: true,
-    arrowsNavHideOnTouch: true,
-    keyboardNavEnabled: true,
-    fadeinLoadedSlide: true,
-    globalCaption: true,
-    globalCaptionInside: false,
-    thumbs: {
-        appendSpan: true,
-        firstMargin: true,
-        paddingBottom: 4
+// Scroll up
+$(window).scroll(function(){
+    if ($(this).scrollTop() >= 100) {
+        $('.up').fadeIn();
+    } else {
+        $('.up').fadeOut();
     }
+});
+
+$('.up').click(function(){
+      $("html, body").animate({ scrollTop: 0 }, 600);
+      return false;
+});
+
+
+
+$(document).ready(function() {
+    setTimeout(function () {
+        $('.main-layout').css("display", "block");
+    }, 2500)
+    setTimeout(function () {
+        $('.intro').fadeOut("slow");
+    }, 2000)
 });
