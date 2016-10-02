@@ -161,7 +161,8 @@ $('.up').click(function(){
 
 
 
-$(document).ready(function() {
+function toBeExecutedOnFirstLoad(){
+  $(document).ready(function() {
     setTimeout(function () {
         $('.main-layout').css("display", "block");
     }, 2500)
@@ -169,3 +170,12 @@ $(document).ready(function() {
         $('.intro').fadeOut("slow");
     }, 2000)
 });
+
+}
+if(localStorage.getItem('first') === null){
+  toBeExecutedOnFirstLoad();
+  localStorage.setItem('first','nope!');
+} else {
+     $('.intro').css("display", "none");
+     $('.main-layout').css("display", "block");
+}
