@@ -148,13 +148,13 @@ window.autosize && autosize(document.querySelectorAll('textarea'));
 // Scroll up
 $(window).scroll(function(){
     if ($(this).scrollTop() >= 100) {
-        $('.up').fadeIn();
+        $('.scrollup').fadeIn();
     } else {
-        $('.up').fadeOut();
+        $('.scrollup').fadeOut();
     }
 });
 
-$('.up').click(function(){
+$('.scrollup').click(function(){
       $("html, body").animate({ scrollTop: 0 }, 600);
       return false;
 });

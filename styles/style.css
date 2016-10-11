@@ -1447,6 +1447,7 @@ html {
 .layout-header .small-logo {
     position: relative;
     float: left;
+    left: 15px;
     text-decoration: none;
     background-image: url("../images/mini-logo.svg");
     background-size: contain;
@@ -1972,6 +1973,7 @@ div.mainTopSlider div.sliderButton a:hover, div.careersTopSlider div.sliderButto
     -webkit-transition: opacity 200ms ease-in;
     transition: opacity 200ms ease-in;
     color: #fff;
+    font-family: "Arimo-regular", Arial, sans-serif;
     font-size: 18px;
     text-transform: none;
 }
@@ -2773,6 +2775,7 @@ a.project-pic:hover {
 }
 
 .scrollup {
+    display: none;
     position: fixed;
     bottom: 80px;
     right: 60px;
@@ -2780,7 +2783,6 @@ a.project-pic:hover {
     z-index: 100;
 }
 .up {
-    display: none;
     position: absolute;
     width: 20px;
     height: 20px;
@@ -2789,6 +2791,18 @@ a.project-pic:hover {
     transform: rotate(45deg);
     border-left: 2px solid #424546;
     border-top: 2px solid #424546;
+    background: transparent;
+    cursor: pointer;
+}
+.up2 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 64px;
+    top: 9px;
+    transform: rotate(45deg);
+    border-left: 2px solid #fff;
+    border-top: 2px solid #fff;
     background: transparent;
     cursor: pointer;
 }
