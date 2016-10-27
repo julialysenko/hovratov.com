@@ -2001,6 +2001,7 @@ div.mainTopSlider div.sliderButton a:hover, div.careersTopSlider div.sliderButto
     background-color: rgba(46, 51, 56, 0.7);
     transition: opacity 200ms ease-in;
     color: #fff;
+    font-family: "Arimo-regular", Arial, sans-serif;
     font-size: 18px;
     text-transform: none;
 }
@@ -2283,7 +2284,7 @@ img.rsImg {
 .rsDefault .rsSlide,
 .rsDefault .rsVideoFrameHolder,
 .rsDefault .rsThumbs {
-	background: #FFF;
+	background: #424546;
 	color: #FFF;
 }
 
