@@ -848,7 +848,7 @@
                             width: "100%",
                             height: "100%"
                         }));
-                        g && (q.marginLeft = 0);
+                        g && (q.marginLeft = Math.floor((h - k) / 2) + a, q.marginTop = Math.floor((n - l) / 2) + a);
                         c.css(q)
                     }
                 }

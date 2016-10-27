@@ -2278,13 +2278,20 @@ img.rsImg {
 
 
 /* Background */
-.rsDefault,
+
 .rsDefault .rsOverflow,
 .rsDefault .rsSlide,
 .rsDefault .rsVideoFrameHolder,
 .rsDefault .rsThumbs {
 	background: #FFF;
 	color: #FFF;
+}
+
+.rsDefault.rsFullscreen .rsOverflow,
+.rsDefault.rsFullscreen .rsSlide,
+.rsDefault.rsFullscreen .rsVideoFrameHolder,
+.rsDefault.rsFullscreen .rsThumbs {
+  background: #3a3838 !important;
 }
 
 
@@ -2318,16 +2325,21 @@ img.rsImg {
 	height: 40px;
 	top: 50%;
 	left: 50%;
-	margin-top:-16px;	
-	margin-left: -16px;
-
 	position: absolute;	
 	cursor: pointer;	
   background-repeat: no-repeat;
   background-position: 0;
 }
-.rsDefault .rsArrowLeft .rsArrowIcn { background-image: url('../images/prev.svg'); }
-.rsDefault .rsArrowRight .rsArrowIcn { background-image: url('../images/next.svg'); }
+.rsDefault .rsArrowLeft .rsArrowIcn { 
+  background-image: url('../images/prev.svg');
+  margin-top:- 16px;	
+	margin-left: -16px;
+}
+.rsDefault .rsArrowRight .rsArrowIcn { 
+  background-image: url('../images/next.svg');
+  margin-top: -16px;	
+	margin-left: -26px;
+}
 .rsDefault .rsArrowIcn:hover {
 	opacity: 1;
 }
@@ -2582,19 +2594,18 @@ img.rsImg {
 ****************/
 
 .rsDefault .rsFullscreenBtn {
-	right: 0;
-	top: 0;
-	width: 44px;
-	height: 44px;
+	position: absolute;
+  top: 30px;
+  right: 10px;
 	z-index: 22;
 	display: block;
-	position: absolute;
 	cursor: pointer;
 	
 }
+.rsDefault.rsFullscreen .rsFullscreenBtn {
+  top: 10px;	
+}
 .rsDefault .rsFullscreenIcn {
-	display: block;
-	margin: 6px;
 	width: 40px;
 	height: 40px;
 	background: url('../images/scale-plus.svg') 0 0;
@@ -2729,6 +2740,8 @@ img.rsImg {
   -moz-user-select: none;  
   user-select: none;
 }
+
+
 
 a.project-pic {
   width: 300px;
