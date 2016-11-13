@@ -165,10 +165,10 @@ function toBeExecutedOnFirstLoad(){
   $(document).ready(function() {
     setTimeout(function () {
         $('.main-layout').css("display", "block");
-    }, 2500)
+    }, 3500)
     setTimeout(function () {
         $('.intro').fadeOut("slow");
-    }, 2000)
+    }, 3000)
 });
 
 }

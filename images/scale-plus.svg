@@ -4,10 +4,11 @@
 	 viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
 <g id="Layer_1_1_">
 	<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="15" cy="15.3" r="13.4"/>
-	<path fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M23.8,14.7H10.7l0,0H6.2c-0.2,0-0.3,0-0.4,0.1s-0.2,0.3-0.1,0.4
-		c0,0.4,0.2,0.6,0.6,0.6h13.1l0,0h4.5c0.2,0,0.3,0,0.4-0.1s0.2-0.3,0.1-0.4C24.4,14.9,24.2,14.7,23.8,14.7z"/>
-	<path fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M14.4,6.5v13.1l0,0v4.5c0,0.2,0,0.3,0.1,0.4
-		c0.1,0.1,0.3,0.2,0.4,0.1c0.4,0,0.6-0.2,0.6-0.6V10.9l0,0V6.5c0-0.2,0-0.3-0.1-0.4S15.1,5.9,15,6C14.7,5.9,14.4,6.1,14.4,6.5z"/>
+	<path fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M22.7,14.7H11.1l0,0h-4c-0.2,0-0.3,0-0.4,0.1s-0.2,0.3-0.1,0.4
+		c0,0.4,0.2,0.6,0.5,0.6h11.6l0,0h4c0.2,0,0.3,0,0.4-0.1c0.1-0.1,0.2-0.3,0.1-0.4C23.2,14.9,23.1,14.7,22.7,14.7z"/>
+	<path fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M14.4,7.4v11.8l0,0v4.1c0,0.2,0,0.3,0.1,0.4
+		c0.1,0.1,0.3,0.2,0.4,0.1c0.4,0,0.6-0.2,0.6-0.5V11.4l0,0v-4c0-0.2,0-0.3-0.1-0.4C15.3,7,15.1,6.9,15,7C14.7,6.9,14.4,7.1,14.4,7.4
+		z"/>
 </g>
 <g id="Layer_2">
 </g>

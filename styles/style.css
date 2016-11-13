@@ -2001,6 +2001,10 @@ img.rsImg {
 	color: #FFF;
 }
 
+.rsDefault .rsThumbs {
+	border-bottom: 5px solid #424546;
+}
+
 .rsDefault.rsFullscreen .rsOverflow,
 .rsDefault.rsFullscreen .rsSlide,
 .rsDefault.rsFullscreen .rsVideoFrameHolder,
@@ -2194,19 +2198,18 @@ img.rsImg {
 .rsDefault.rsWithThumbsHor .rsThumbsArrowRight { right: 0; top:0; }
 
 .rsDefault .rsThumbsArrowIcn {		
-	width: 16px;
-	height: 16px;
-	top: 50%;
-	left: 50%;
-	margin-top:-8px;	
-	margin-left: -8px;
-	position: absolute;	
-	cursor: pointer;	
-	background: url('../images/rs-defau.png');
+	  width: 10px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -5px;
+    position: absolute;
+    cursor: pointer;
 }
 
-.rsDefault.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -128px -32px; }
-.rsDefault.rsWithThumbsHor .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -128px -48px; }
+.rsDefault.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn { background: url('../images/prev-m.svg'); }
+.rsDefault.rsWithThumbsHor .rsThumbsArrowRight .rsThumbsArrowIcn { background: url('../images/next-m.svg'); }
 
 .rsDefault.rsWithThumbsVer .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -144px -32px; }
 .rsDefault.rsWithThumbsVer .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -144px -48px; }
@@ -2309,8 +2312,8 @@ img.rsImg {
 
 .rsDefault .rsFullscreenBtn {
 	position: absolute;
-  top: 30px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
 	z-index: 22;
 	display: block;
 	cursor: pointer;
@@ -2320,8 +2323,8 @@ img.rsImg {
   top: 10px;	
 }
 .rsDefault .rsFullscreenIcn {
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	background: url('../images/scale-plus.svg') 0 0;
 
 }
