@@ -39,57 +39,85 @@
             <div class="intro-logo"></div>
         </div>
         <div class="main-layout">
-            <div class="layout-header">
+            <header class="header js-content">
                 <a class="small-logo" href="./index.html"></a>
-                <div class="menu">
-                    <ul>
-                        <li>
-                            <a href="#about">
-                                О нас
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./projects.html">
-                                Проекты
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#partners">
-                                Партнеры
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contacts">
-                                Контакты
-                            </a>
-                        </li>
-                    </ul>
+                <nav class="nav js-nav">
+                    <a class="nav__item " href="#about">О нас </a>
+                    <a class="nav__item " href="./projects.html">Проекты </a>
+                    <a class="nav__item " href="#partners">Партнеры </a>
+                    <a class="nav__item " href="#contacts">Контакты </a>
+                    <span class="nav__close js-close-nav">×</span>
+                    <div class="language">
+                        <a class="language__link lang" href="#"><span class="globe"></span>EN</a>
+                    </div>
+                    <div class="contacts contacts--mob">
+                        <a class="contacts__item" href="#"><span class="facebook"></span></a>
+                        <a class="contacts__item" href="#"><span class="instagram"></span></a>
+                        <a class="contacts__item" href="#"><span class="pinterest"></span></a>
+                    </div>
+                </nav>
+                <div class="js-open-nav">
+                    <span class="open-nav "></span>
                 </div>
-                    <ul class="social">
-                        <li class="lang">
-                            <a href="#">RU<span class="globe"></span></a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="facebook"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="instagram"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="pinterest"></span>
-                            </a>
-                        </li>
-                    </ul>
-            </div>
+            </header>
 
             <div class="layout-head">
+                <section class="home-slider">
+                    <div class="home-slider__item home-slider__item--first home-slider__item--showing">
+                        <div class="home-slider__content">
+                            <h2 class="home-slider__top home-slider__top--showing">Индивидуальное проектирование</h2>
+                            <span class="home-slider__line home-slider__line--showing"></span>
+                            <p class="home-slider__title home-slider__title--showing">Мы готовы сделать уникальный проект по вашим пожеланиям и возможностям,<br>
+                                полностью соответствующий потребностям всех членов семьи и характеристикам земельного участка.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="home-slider__item home-slider__item--second">
+                        <div class="home-slider__content">
+                            <h2 class="home-slider__top">Комплексный подход</h2>
+                            <span class="home-slider__line"></span>
+                            <p class="home-slider__title">Представляем абсолютно все этапы производства, благодаря сотрудничеству с
+                                надежными партнерами и подрядчиками.<br> От разработки проектной документации до сдачи готового дома «под ключ».
+                            </p>
+                        </div>
+                    </div>
+                    <div class="home-slider__item home-slider__item--third">
+                        <div class="home-slider__content">
+                            <h2 class="home-slider__top">Фахверковые дома</h2>
+                            <span class="home-slider__line"></span>
+                            <p class="home-slider__title">Изящный внешний облик, ощущение единения с природой, быстрота возведения идолговечность, –<br>
+                                вот только несколько преимуществ технологии фахверк.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="home-slider__item home-slider__item--fourth">
+                        <div class="home-slider__content">
+                            <h2 class="home-slider__top">Детали интерьера</h2>
+                            <span class="home-slider__line"></span>
+                            <p class="home-slider__title">Все ваши увлечения и привычки могут воплотится в интерьерных решениях.<br>
+                                Хотите бассейн на крыше? Или гараж для мотоцикла на втором этаже?<br>Мы реализуем любые ваши желания и прихоти.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="home-slider__item home-slider__item--fifth">
+                        <div class="home-slider__content">
+                            <h2 class="home-slider__top">Ландшафтный дизайн</h2>
+                            <span class="home-slider__line"></span>
+                            <p class="home-slider__title">ИК вашим услугам все виды ландшафтного дизайна и благоустройства территории, <br>
+                                в том числе и художественное освещение.<br>Гарантируем оптимальное расположение объектов и пристроек в пространстве участка.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="home-slider__control">
+                        <button class="home-slider__control-item home-slider__control-item--showing" data-currentslide="0"></button>
+                        <button class="home-slider__control-item" data-currentslide="1"></button>
+                        <button class="home-slider__control-item" data-currentslide="2"></button>
+                        <button class="home-slider__control-item" data-currentslide="3"></button>
+                        <button class="home-slider__control-item" data-currentslide="4"></button>
+                    </div>
+                </section>
 
-                <div class="mainTopSlider">
+               <!-- <div class="mainTopSlider">
                     <div class="topSliderBG">
                         <input type="hidden" id="sliderBigText1" value="Индивидуальное проектирование">
                         <input type="hidden" id="sliderBigText2" value="Комплексный подход">
@@ -121,7 +149,7 @@
                     <div class="bigText"></div>
                     <div class="sliderLine"></div>
                     <div class="smallText"></div>
-                    <!--<div class="sliderButton"><a href="#aboutUs">LEARN MORE</a></div>-->
+                    
                     <div class="sliderPoints">
                         <div class="point first" id="point1"></div>
                         <div class="point" id="point2"></div>
@@ -130,7 +158,7 @@
                         <div class="point last" id="point5"></div>
                         <div class="clear"></div>
                     </div>
-                </div>
+                </div>-->
                 <div class="head-arrow-wrapper"><div class="head-arrow-down"></div></div>
             </div>
             <div class="layout-content">
