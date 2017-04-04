@@ -3020,3 +3020,45 @@ a.project-pic:hover {
         padding-bottom: 56.25%
     }
 }
+
+@media (max-width: 1024px) {
+    .layout-container {
+        width: 100%;
+        padding: 10px;
+    }
+    .row > .col-12 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .row > .col-3,
+    .row > .col-4,
+    .row > .col-6,
+    .layout-footer textarea {
+        width: 100%;
+    }
+    .layout-container h2 {
+        font-size: 36px;
+        line-height: 40px;
+        margin-top: 30px;
+    }
+    .col-3 p {
+        text-align: center;
+    }
+    .house,
+    .details,
+    .build,
+    .innovations {
+        margin: 0 30%;
+    }
+    .layout-footer input {
+        margin: 30px 0 0 0;
+    }
+    .layout-footer textarea {
+        margin: 30px 0 25px 0;
+    }
+    .layout-footer {
+        margin-top: 20px;
+    }
+}
