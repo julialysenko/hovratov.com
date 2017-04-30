@@ -5,10 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Vsevolod Hovratov</title>
         <meta name="description" content="Vsevolod Hovratov HTML project">
-        <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="viewport" content="width=device-width user-scalable=no">
 
         <!-- Favicon block -->
-        <!-- Images generated from a single 260x260 image by http://realfavicongenerator.net/ -->
+        <link rel="shortcut icon" href="favicon/favicon.ico">
+
         <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
@@ -30,189 +31,265 @@
 
         <link rel="stylesheet" type="text/css" href="styles/normalize.css">
         <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="styles/slick-theme.css">
-        <link rel="stylesheet" type="text/css" href="styles/slick.css">
         <link rel="stylesheet" type="text/css" href="styles/style.css">
 
     </head>
     <body>
-        <div class="layout-header">
-            <a class="small-logo" href="#"></a>
-            <div class="menu">
-                <ul>
-                    <li>
-                        <a href="#about">
-                            О нас
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./projects.html">
-                            Проекты
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#partners">
-                            Партнеры
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contacts">
-                            Контакты
-                        </a>
-                    </li>
-                </ul>
+        <div class="intro">
+            <div class="intro-logo"></div>
+        </div>
+        <div class="main-layout">
+            <header class="header js-content">
+                <a class="small-logo" href="./index.html"></a>
+                <nav class="nav js-nav">
+                    <a class="nav__item " href="#about">О нас </a>
+                    <a class="nav__item " href="./projects.html">Проекты </a>
+                    <a class="nav__item " href="#partners">Партнеры </a>
+                    <a class="nav__item " href="#contacts">Контакты </a>
+                    <span class="nav__close js-close-nav">×</span>
+                    <div class="language">
+                        <a class="language__link lang" href="#"><span class="globe"></span>EN</a>
+                    </div>
+                    <div class="contacts contacts--mob">
+                        <a class="contacts__item" href="#"><span class="facebook"></span></a>
+                        <a class="contacts__item" href="#"><span class="instagram"></span></a>
+                        <a class="contacts__item" href="#"><span class="pinterest"></span></a>
+                    </div>
+                </nav>
+                <div class="js-open-nav">
+                    <span class="open-nav "></span>
+                </div>
+            </header>
+
+            <div class="layout-head">
+                <section class="home-slider">
+                    <div class="home-slider__item home-slider__item--first home-slider__item--showing">
+                        <div class="home-slider__content">
+                            <h2 class="home-slider__top home-slider__top--showing">Индивидуальное проектирование</h2>
+                            <span class="home-slider__line home-slider__line--showing"></span>
+                            <p class="home-slider__title home-slider__title--showing">Мы готовы сделать уникальный проект по вашим пожеланиям и возможностям,<br>
+                                полностью соответствующий потребностям всех членов семьи и характеристикам земельного участка.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="home-slider__item home-slider__item--second">
+                        <div class="home-slider__content">
+                            <h2 class="home-slider__top">Комплексный подход</h2>
+                            <span class="home-slider__line"></span>
+                            <p class="home-slider__title">Представляем абсолютно все этапы производства, благодаря сотрудничеству с
+                                надежными партнерами и подрядчиками.<br> От разработки проектной документации до сдачи готового дома «под ключ».
+                            </p>
+                        </div>
+                    </div>
+                    <div class="home-slider__item home-slider__item--third">
+                        <div class="home-slider__content">
+                            <h2 class="home-slider__top">Фахверковые дома</h2>
+                            <span class="home-slider__line"></span>
+                            <p class="home-slider__title">Изящный внешний облик, ощущение единения с природой, быстрота возведения идолговечность, –<br>
+                                вот только несколько преимуществ технологии фахверк.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="home-slider__item home-slider__item--fourth">
+                        <div class="home-slider__content">
+                            <h2 class="home-slider__top">Детали интерьера</h2>
+                            <span class="home-slider__line"></span>
+                            <p class="home-slider__title">Все ваши увлечения и привычки могут воплотится в интерьерных решениях.<br>
+                                Хотите бассейн на крыше? Или гараж для мотоцикла на втором этаже?<br>Мы реализуем любые ваши желания и прихоти.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="home-slider__item home-slider__item--fifth">
+                        <div class="home-slider__content">
+                            <h2 class="home-slider__top">Ландшафтный дизайн</h2>
+                            <span class="home-slider__line"></span>
+                            <p class="home-slider__title">ИК вашим услугам все виды ландшафтного дизайна и благоустройства территории, <br>
+                                в том числе и художественное освещение.<br>Гарантируем оптимальное расположение объектов и пристроек в пространстве участка.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="home-slider__control">
+                        <button class="home-slider__control-item home-slider__control-item--showing" data-currentslide="0"></button>
+                        <button class="home-slider__control-item" data-currentslide="1"></button>
+                        <button class="home-slider__control-item" data-currentslide="2"></button>
+                        <button class="home-slider__control-item" data-currentslide="3"></button>
+                        <button class="home-slider__control-item" data-currentslide="4"></button>
+                    </div>
+                </section>
+
+               <!-- <div class="mainTopSlider">
+                    <div class="topSliderBG">
+                        <input type="hidden" id="sliderBigText1" value="Индивидуальное проектирование">
+                        <input type="hidden" id="sliderBigText2" value="Комплексный подход">
+                        <input type="hidden" id="sliderBigText3" value="Фахверковые дома">
+                        <input type="hidden" id="sliderBigText4" value="Детали интерьера">
+                        <input type="hidden" id="sliderBigText5" value="Ландшафтный дизайн">
+
+                        <input type="hidden" id="sliderSmallText1" value="Мы готовы сделать уникальный проект по вашим пожеланиям и возможностям,<br>
+                                                                        полностью соответствующий потребностям всех членов семьи и характеристикам
+                                                                        земельного участка.">
+                        <input type="hidden" id="sliderSmallText2" value="Представляем абсолютно все этапы производства, благодаря сотрудничеству с
+                                                                        надежными партнерами и подрядчиками.<br> 
+                                                                        От разработки проектной документации до сдачи готового дома «под ключ».">
+                        <input type="hidden" id="sliderSmallText3" value="Изящный внешний облик, ощущение единения с природой, быстрота возведения идолговечность, –<br>
+                                                                        вот только несколько преимуществ технологии фахверк.">
+                        <input type="hidden" id="sliderSmallText4" value="Все ваши увлечения и привычки могут воплотится в интерьерных решениях.<br>
+                                                                        Хотите бассейн на крыше? Или гараж для мотоцикла на втором этаже?<br>
+                                                                        Мы реализуем любые ваши желания и прихоти.">
+                        <input type="hidden" id="sliderSmallText5" value="К вашим услугам все виды ландшафтного дизайна и благоустройства территории, <br>
+                                                                        в том числе и художественное освещение.<br>
+                                                                        Гарантируем оптимальное расположение объектов и пристроек в пространстве участка.">
+
+                        <img class="first" src="./images/main-img1.jpg" style="transform-origin: top left 0"/>
+                        <img src="./images/main-img2.jpg" style="transform-origin: top right 0"/>
+                        <img src="./images/main-img6.jpg" style="transform-origin: bottom left 0"/>
+                        <img src="./images/main-img3.jpg" style="transform-origin: top left 0"/>
+                        <img class="last" src="./images/main-img7.jpg" style="transform-origin: bottom left 0"/>
+                    </div>
+                    <div class="bigText"></div>
+                    <div class="sliderLine"></div>
+                    <div class="smallText"></div>
+                    
+                    <div class="sliderPoints">
+                        <div class="point first" id="point1"></div>
+                        <div class="point" id="point2"></div>
+                        <div class="point" id="point3"></div>
+                        <div class="point" id="point4"></div>
+                        <div class="point last" id="point5"></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>-->
+                <div class="head-arrow-wrapper"><div class="head-arrow-down"></div></div>
             </div>
-                <ul class="social">
-                   <!--<li class="lang">
-                        <a href="#">RU</a>
-                    </li>-->
-                    <li>
-                        <a href="#">
-                            <span class="facebook"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="instagram"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="pinterest"></span>
-                        </a>
-                    </li>
-                </ul>
+            <div class="layout-content">
+                <div class="layout-container">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <h2 id="about">О нас</h2>
+
+                            <p>Мы сплоченная команда профессиональных архитекторов, дизайнеров и художников, которая гордится своим опытом и мастерством. Поэтому, будьте уверены, мы воплотим в жизнь любые ваши идей и замыслы. Создадим проект, полностью отвечающий всем эстетическим требованиям и         функциональным задачам.
+                            </p>
+                            <p>Ваш будущий дом будет уникальным, ярким и стильным! Ведь наши сотрудники – это не только реальные профи, но и люди, которые по настоящему любят свое дело, а это, согласитесь, важный фактор в колективном труде.
+                                Строительство не только наш труд, —  это также, и наше творчество!
+                            </p>
+                            <p>Нас вдохновляет мысль, что дом, это небольшой личный мир. Место, где архитектурные  и дизайнерские решения передают персональное отношение к жизни, и дарят эстетичиское и душевное удовольствие.
+                                Поэтому, считаем важным услышать и понять каждого клиента, и направить его в сторону желаемого результата — построить собственную среду обетания, где каждая мелочь в интерьере дарит ощущение уюта и гармонии. 
+                                Нам нравиться творить, — придумывать и находить креативные решения!
+                            </p>
+                            <p>Благодаря такому отношению, удалось сформировать налаженную  структуру  единомышленников, — это наши стабильные партнеры и ответственные, проверенные временем подрядчики. У нас отлаженный  рабочий процесс, поэтому вы можете ни о чем не беспокоиться и продолжать заниматься своими делами в то время, как мы трудимся над вашей мечтой!
+                            </p>
+                            <p>Выполняем полный цикл производства: планировка и техническая документация, производство и монтаж элементов дома, продумывание интерьерных тонкостей, ландшафтный дизайн. Мы создадим для вас неповторимое место — настоящий райский уголок! Предлагаем художественное освещение участка, благоустройство и озеленение территории.
+                            </p>
+                            <p>Результатами такого подхода есть всегда уникальные, современные дома, построенные из качественных материалов, за оптимальную стоимость и сроки. С нами вы будете ощущать уверенность от выбора, и удовольствие от процесса создания и строительства собственного жилья. 
+                                Будем рады сотрудничеству!
+                            </p>
+                            <p>Нам удалось сформировать налаженную структуру
+                                единомышленников, – это наши стабильные партнеры и ответственные, проверенные
+                                временем подрядчики. У нас отлаженный рабочий процесс, поэтому вы можете ни о чем
+                                не беспокоиться и продолжать заниматься своими делами в то время, как мы трудимся
+                                над вашей мечтой!</p>
+                            <p>Выполняем полный цикл производства; планировка и техническая документация,
+                                производство и монтаж элементов дома, продумывание интерьерных тонкостей,
+                                ландшафтный дизайн. Мы создадим для вас неповторимое место – настоящий райский
+                                уголок! Предлагаем художественное освещение участка, благоустройство и озеленение
+                                территории.</p>
+                        </div>
+                    </div>
+                    <h2>Наши преимущества</h2>
+                    <div class="row">
+                        <div class="col-3">
+                            <span class="house"></span>
+                            <p class="text-center">Успешный опыт реализации проектов самых высоких уровней сложности.</p>
+                        </div>
+                        <div class="col-3">
+                            <span class="details"></span>
+                            <p class="text-center">Индивидуальный творческий подход. Внимание к деталям.</p>
+                        </div>
+                        <div class="col-3">
+                            <span class="build"></span>
+                            <p class="text-center">Постоянные професиональные строительные бригады.</p>
+                        </div>
+                        <div class="col-3">
+                            <span class="innovations"></span>
+                            <p class="text-center">Использывание инновационных технологий</p>
+                        </div>
+                    </div>
+                    <h2>Последние проекты</h2>
+                    <div class="row">
+                        <div class="col-4">
+                            <h3>Загородный дом Одесса</h3>
+                            <a href="./projects/project1/single-project1.html" class="project-pic">
+                                <img src="./images/img31.jpg" alt="house1" height="200" width="300">
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <h3>Коттедж киевское море</h3>
+                            <a href="./projects/project2/single-project2.html" class="project-pic">
+                                <img src="./images/img21.jpg" alt="house2" height="200" width="300">
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <h3>Дизайн интерьера</h3>
+                            <a href="./projects/project3/single-project3.html" class="project-pic">
+                                <img src="./images/img11.jpg" alt="house3" height="200" width="300">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 id="partners">Партнеры</h2>
+
+                            <p>Нам удалось сформировать налаженную структуру
+                                единомышленников, – это наши стабильные партнеры и ответственные, проверенные
+                                временем подрядчики. У нас отлаженный рабочий процесс, поэтому вы можете ни о чем
+                                не беспокоиться и продолжать заниматься своими делами в то время, как мы трудимся
+                                над вашей мечтой!</p>
+                            <p>Выполняем полный цикл производства; планировка и техническая документация,
+                                производство и монтаж элементов дома, продумывание интерьерных тонкостей,
+                                ландшафтный дизайн. Мы создадим для вас неповторимое место – настоящий райский
+                                уголок! Предлагаем художественное освещение участка, благоустройство и озеленение
+                                территории.</p>
+                            <a href="#"><img src="./images/dervus_logo.png"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="scrollup">
+                    <span class="up"></span>
+                    <span class="up2"></span>
+                </div>
+            </div>
+
+            <div class="layout-footer">
+                <div class="layout-container">
+                    <div class="row">
+                        <div class="col-6">
+                            <h2 id="contacts">Контакты</h2>
+                            <div class="contacts-block">
+                                <span class="phone"></span><p>+380 44 225 29 16</p>
+                                <span class="mail"></span><p>hovratov@gmail.com</p>
+                                <span class="location"></span><p>Киев, ул. Оросительная, 5</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <form>
+                                <input placeholder="Телефон или e-mail">
+                                <textarea placeholder="Опишите ваш проект"></textarea>
+                                <button class="b-btn btn">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                    <span class="copyrite">Vsevolod Hovratov 2016</span>
+                </div>
+            </div>
         </div>
 
-        <div class="layout-head">
-            <div class="mainlogo-block"></div>
-            <div class="mainTopSlider">
-                <div class="topSliderBG">
-                    <input type="hidden" id="sliderBigText1" value="Индивидуальное проектирование">
-                    <input type="hidden" id="sliderBigText2" value="Комплексный подход">
-                    <input type="hidden" id="sliderBigText3" value="Фахверковые дома">
-                    <input type="hidden" id="sliderBigText4" value="Детали интерьера">
-                    <input type="hidden" id="sliderBigText5" value="Ландшафтное проектирование">
-
-                    <input type="hidden" id="sliderSmallText1" value="Мы готовы сделать уникальный проект по вашим пожеланиям и возможностям,<br>
-                                                                    полностью соответствующий потребностям всех членов семьи и характеристикам
-                                                                    земельного участка.">
-                    <input type="hidden" id="sliderSmallText2" value="Представляем абсолютно все этапы производства, благодаря сотрудничеству с
-                                                                    надежными партнерами и подрядчиками.<br> 
-                                                                    От разработки проектной документации до сдачи готового дома «под ключ».">
-                    <input type="hidden" id="sliderSmallText3" value="Изящный внешний облик, ощущение единения с природой, быстрота возведения идолговечность, –<br>
-                                                                     вот только несколько преимуществ технологии фахверк.">
-                    <input type="hidden" id="sliderSmallText4" value="Все ваши увлечения и привычки могут воплотится в интерьерных решениях.<br>
-                                                                    Хотите бассейн на крыше? Или гараж для мотоцикла на втором этаже?<br>
-                                                                    Мы реализуем любые ваши желания и прихоти.">
-                    <input type="hidden" id="sliderSmallText5" value="К вашим услугам все виды ландшафтного дизайна и благоустройства территории, <br>
-                                                                    в том числе и художественное освещение.<br>
-                                                                    Гарантируем оптимальное расположение объектов и пристроек в пространстве участка.">
-
-                    <img class="first" src="./images/main-img1.jpg" style="transform-origin: top left 0"/>
-                    <img src="./images/main-img2.jpg" style="transform-origin: top right 0"/>
-                    <img src="./images/main-img4.jpg" style="transform-origin: bottom left 0"/>
-                    <img src="./images/main-img5.jpg" style="transform-origin: top left 0"/>
-                    <img class="last" src="./images/main-img7.jpg" style="transform-origin: bottom left 0"/>
-                </div>
-                <div class="bigText"></div>
-                <div class="sliderLine"></div>
-                <div class="smallText"></div>
-                <!--<div class="sliderButton"><a href="#aboutUs">LEARN MORE</a></div>-->
-                <div class="sliderPoints">
-                    <div class="point first" id="point1"></div>
-                    <div class="point" id="point2"></div>
-                    <div class="point" id="point3"></div>
-                    <div class="point" id="point4"></div>
-                    <div class="point last" id="point5"></div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-             <div class="head-arrow-wrapper"><div class="head-arrow-down"></div></div>
-        </div>
-        <div class="layout-content">
-            <div class="layout-container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 id="about">О нас</h2>
-                          <p>Мы сплоченная команда профессиональных архитекторов, дизайнеров и художников, 
-                          которая гордится своим опытом и мастерством. Поэтому, будьте уверены, 
-                          мы воплотим в жизнь любые ваши идей и замыслы.<br>
-                          Создадим проект, полностью отвечающий всем эстетическим требованиям и функциональным задачам.<br>
-                          Ваш будущий дом будет уникальным, ярким и стильным! Ведь наши сотрудники – это не только реальные профи, 
-                          но и люди, которые по настоящему любят свое дело, а это, согласитесь, важный фактор в колективном труде.<br>
-                              
-                          Строительство не только наш труд, – это также, и наше творчество! Нас вдохновляет мысль, что дом, 
-                          это небольшой личный мир. Место, где архитектурные и дизайнерские решения передают персональное 
-                          отношение к жизни, и дарят эстетичиское и душевное удовольствие. Поэтому, считаем важным услышать 
-                          и понять каждого клиента, и направить его в сторону желаемого результата – построить собственную 
-                          среду обетания, где каждая мелочь в интерьере дарит ощущение уюта и гармонии.
-                          Нам нравиться творить, – придумывать и находить креативные решения!</p>
-                    </div>
-                </div>
-                <h3>Наши преимущества</h3>
-                <div class="row">
-                    <div class="col-3">
-                        <p>Успешный опыт реализации проектов самых высоких уровней сложности.</p>
-                    </div>
-                    <div class="col-3">
-                        <p>Индивидуальный творческий подход. Внимание к деталям.</p>
-                    </div>
-                    <div class="col-3">
-                        <p>Постоянные професиональные строительные бригады.</p>
-                    </div>
-                    <div class="col-3">
-                        <p>Использывание инновационных технологий</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Последние проекты</h2>
-                    </div>
-                </div>
-            </div>
-            <section class="projects slider">
-                <div><div class="img-container item-1"></div><div class="slider-content"></div></div>
-                <div><div class="img-container item-1"></div><div class="slider-content"></div></div>
-                <div><div class="img-container item-3"></div><div class="slider-content"></div></div>
-                <div><div class="img-container item-4"></div><div class="slider-content"></div></div>
-                <div><div class="img-container item-5"></div><div class="slider-content"></div></div>
-           </section>
-           <div class="layout-container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 id="partners">Партнеры</h2>
-                          <p>Нам удалось сформировать налаженную структуру
-                            единомышленников, – это наши стабильные партнеры и ответственные, проверенные
-                            временем подрядчики. У нас отлаженный рабочий процесс, поэтому вы можете ни о чем
-                            не беспокоиться и продолжать заниматься своими делами в то время, как мы трудимся
-                            над вашей мечтой!</p>
-                          <p>Выполняем полный цикл производства; планировка и техническая документация,
-                            производство и монтаж элементов дома, продумывание интерьерных тонкостей,
-                            ландшафтный дизайн. Мы создадим для вас неповторимое место – настоящий райский
-                            уголок! Предлагаем художественное освещение участка, благоустройство и озеленение
-                            территории.</p>
-                        <img src="./images/dervus_logo.png">
-
-                        <h2 id="contacts">Контакты</h2>
-                        <p>Киев, Ул. Немировича-Данченко, 5</p>
-                        <p>+380 44 225 29 16</p>
-                        <p>hovratov@gmail.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="layout-footer">
-            <span>Vsevolod Hovratov 2016</span>
-        </div>
-
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
         <script src="scripts/jquery-1.11.3.min.js"></script>
         <script src="scripts/bootstrap.js"></script>
-        <script src="scripts/slick.js"></script>
+        <script src="scripts/autosize.js"></script>
         <script src="scripts/main.js"></script>
 
     </body>
