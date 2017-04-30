@@ -2065,8 +2065,8 @@ img.rsImg {
 
 .rsDefault .rsFullscreenBtn {
 	position: absolute;
-  top: 20px;
-  right: 20px;
+    top: 13px;
+    right: 20px;
 	z-index: 22;
 	display: block;
 	cursor: pointer;
@@ -2078,14 +2078,13 @@ img.rsImg {
 .rsDefault .rsFullscreenIcn {
 	width: 30px;
 	height: 30px;
-	background: url('../images/scale-plus.svg') 0 0;
-
+	background: url('../images/zoom.svg') 0 0;
 }
 .rsDefault .rsFullscreenIcn:hover {
 	opacity: 0.9;
 }
 .rsDefault.rsFullscreen .rsFullscreenIcn {
-	background: url('../images/scale-minuse.svg') 0 0;
+	background: url('../images/zoomout.svg') 0 0;
 }
 
 
@@ -2830,7 +2829,7 @@ a.project-pic:hover {
         position: fixed;
         top: 0;
         bottom: 0;
-        z-index: 3;
+        z-index: 1000;
         right: -100%;
         width: 100%;
         margin: 0;
@@ -2906,13 +2905,19 @@ a.project-pic:hover {
         height: 580px
     }
     .home-slider__item--first:before {
-        background: url(../images/slide_mob_2.jpg)
+        background: url(../images/s_mob_1.jpg)
     }
     .home-slider__item--second:before {
-        background: url(../images/slide_mob_3.jpg)
+        background: url(../images/s_mob_2.jpg)
     }
     .home-slider__item--third:before {
-        background: url(../images/slide_mob_4.jpg)
+        background: url(../images/s_mob_3.jpg)
+    }
+    .home-slider__item--fourth:before {
+        background: url(../images/s_mob_4.jpg)
+    }
+    .home-slider__item--fifth:before {
+        background: url(../images/s_mob_5.jpg)
     }
     .home-slider__content {
         padding-top: 180px
