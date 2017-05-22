@@ -65,6 +65,10 @@ $('.scrollup').click(function(){
       return false;
 });
 
+$('.cls').click(function(){
+    $(".js-nav").removeClass('nav--open');
+});
+
 function toBeExecutedOnFirstLoad(){
   $(document).ready(function() {
     setTimeout(function () {
@@ -130,7 +134,7 @@ if(localStorage.getItem('first') === null){
             var t = e.target;
             t.classList.contains("nav__item") && r()
         })
-        document.querySelector(".header .nav__close, .cls").addEventListener("click", r), document.querySelector(".nav").addEventListener("click", function(e) {
+        document.querySelector(".header .nav__close").addEventListener("click", r), document.querySelector(".nav").addEventListener("click", function(e) {
             var t = e.target;
             t.classList.contains("nav__item") && r()
         })
