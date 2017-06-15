@@ -370,8 +370,6 @@ a {
   transition: opacity 0.15s linear; }
 a:hover, a:focus {
     opacity: 0.7; }
-a:active {
-    color: #3d5266; }
 /* Segmented link
  *
  * Intended for use with icons to avoid icons being underlined:
@@ -1350,7 +1348,7 @@ body {
   background-color: #424546; }
 .layout-footer h2,
 .layout-footer p {
-  color: #fff;
+  color: #fff!important;
 }
 .b-btn {
     font-family: "Arimo-regular", Arial, sans-serif;
@@ -2419,7 +2417,6 @@ a.project-pic:hover {
     font-family: "Arimo-regular", Arial, sans-serif;
     margin: 0 10% 0 0
 }
-.nav__item--active,
 .nav__item:hover {
     opacity: 0.7;
 }
