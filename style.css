@@ -1,0 +1,357 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cuprum", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 80px;
+  max-width: 640px;
+}
+
+h1 {
+  padding: 56px 0;
+  color: #fff;
+}
+h1 span {
+  color: #FFE6B5;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 93px 0;
+}
+
+.main-content {
+  overflow: hidden;
+}
+
+.block {
+  position: relative;
+  width: 1152px;
+  height: 100vh;
+  max-height: 900px;
+  margin: 0 auto;
+}
+
+.heading {
+  display: flex;
+  width: 100%;
+  background-image: url("http://julialysenko.github.io/hovratov.com/images/main-img2.jpg");
+  background-position: center;
+}
+
+.bio {
+  display: flex;
+  align-items: center;
+}
+.bio .col {
+  width: 50%;
+}
+.bio .photo {
+  float: right;
+  width: 440px;
+  height: 440px;
+  background-image: url("photo.png");
+}
+
+.btn {
+  position: absolute;
+  bottom: 80px;
+  width: 240px;
+  height: 56px;
+  padding: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 56px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+.logo {
+  width: 354px;
+  height: 38px;
+  background-image: url("logo.svg");
+  cursor: pointer;
+}
+
+.menu-btn {
+  width: 74px;
+  height: 10px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+  transition: height 0.3s ease;
+}
+.menu-btn:hover {
+  height: 12px;
+}
+
+.menu-block {
+  position: absolute;
+  display: none;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+.menu-block .inner a {
+  color: #111;
+}
+.menu-block .logo {
+  background-image: url("logo-black.svg");
+}
+
+.close {
+  width: 12px;
+  height: 12px;
+  margin: 34px 0 0 56px;
+  background-image: url("close.svg");
+  cursor: pointer;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .col:nth-of-type(1) {
+  width: 40%;
+  height: 100vh;
+  max-height: 900px;
+  background-image: url("http://julialysenko.github.io/hovratov.com/images/main-img1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.wrap .col:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  background-color: #E8E1D5;
+}
+.wrap .col:nth-of-type(2) h2 {
+  padding: 0 0 0 120px;
+}
+.wrap.rev .col:nth-of-type(1) {
+  width: 60%;
+  background-image: url("img3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.wrap.rev .col:nth-of-type(2) {
+  width: 40%;
+  background-color: #fff;
+}
+
+.benefits {
+  display: flex;
+  align-items: center;
+}
+.benefits h3,
+.benefits p {
+  width: 480px;
+}
+
+.slider {
+  width: 100%;
+  padding: 0 0 0 80px;
+}
+.slider p {
+  position: relative;
+  margin: 40px 0;
+  font-size: 22px;
+  line-height: 40px;
+}
+.slider p:before {
+  position: absolute;
+  content: "1";
+  top: 24px;
+  left: -72px;
+  font-family: "Cuprum", sans-serif;
+  font-weight: 400;
+  font-size: 160px;
+  color: #FFE6B5;
+}
+.slider .img-block {
+  position: absolute;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  top: 20%;
+  right: 0;
+}
+.slider .img {
+  width: 464px;
+  height: 464px;
+  border-radius: 100%;
+  background-image: url("http://julialysenko.github.io/hovratov.com/images/main-img1.jpg");
+  background-size: cover;
+}
+.slider .crl {
+  position: absolute;
+  left: 220px;
+  width: 720px;
+  height: 720px;
+  border: 2px solid #E5E5E5;
+  border-radius: 100%;
+  z-index: -1;
+}
+.slider .nav {
+  display: flex;
+  align-items: center;
+}
+.slider .arrow {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  margin: 0 16px 0 0;
+  border: 2px solid #E5E5E5;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.slider .arrow:before {
+  position: absolute;
+  top: 20px;
+  content: "";
+  width: 12px;
+  height: 12px;
+}
+.slider .arrow.left:before {
+  right: 16px;
+  border-top: 2px solid #E5E5E5;
+  border-left: 2px solid #E5E5E5;
+  transform: rotate(-45deg);
+}
+.slider .arrow.right:before {
+  left: 16px;
+  border-top: 2px solid #E5E5E5;
+  border-right: 2px solid #E5E5E5;
+  transform: rotate(45deg);
+}
+.slider .arrow.active {
+  border-color: #FFE6B5;
+}
+.slider .arrow.active:before {
+  border-color: #FFE6B5;
+}
+
+.projects {
+  position: relative;
+  width: 1152px;
+  margin: 0 auto;
+}
+.projects .row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 56px 0;
+}
+.projects .item {
+  position: relative;
+  width: 564px;
+  height: 800px;
+  padding: 64px;
+  background-image: url("http://julialysenko.github.io/hovratov.com/projects/project3/1.jpg");
+  background-position: center;
+  cursor: pointer;
+}
+.projects .tag {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #FFE6B5;
+}
+.projects .title {
+  position: absolute;
+  bottom: 64px;
+  font-family: "Cuprum", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  color: #fff;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #11111140;
+}
+
+footer {
+  width: 100%;
+  height: 240px;
+  background-color: #111;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1152px;
+  margin: 0 auto;
+  padding: 72px 0;
+}
+.inner a {
+  display: block;
+  margin: 0 0 16px 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #E5E5E5;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+.inner a:hover {
+  opacity: 0.8;
+}
+.inner .links {
+  display: flex;
+}
+.inner .col {
+  margin: 0 48px;
+}
+
+.social {
+  display: flex;
+}
+
+a.facebook {
+  width: 20px;
+  height: 20px;
+  margin: 0 16px 0 0;
+  background-image: url("fb.svg");
+}
+
+.linkedin {
+  width: 20px;
+  height: 20px;
+  background-image: url("linkedin.svg");
+}
+
+/*# sourceMappingURL=style.css.map */
