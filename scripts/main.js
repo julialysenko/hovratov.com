@@ -65,6 +65,10 @@ $('.scrollup').click(function(){
       return false;
 });
 
+$('.cls').click(function(){
+    $(".js-nav").removeClass('nav--open');
+});
+
 function toBeExecutedOnFirstLoad(){
   $(document).ready(function() {
     setTimeout(function () {
